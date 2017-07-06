@@ -167,11 +167,12 @@ public ReadOnlyCollection<SetupFlag> GetSetupFlags();
 Get all the flags that vision is reporting.
 
 ```csharp
-public enum SetupFlag { // is an integer bit mask with these bit values
-	Run = 0,                    // 1
-	Perfect = 1,                // 2
-	BadOrientation = 2,        // 4
-	MirrorUncentered = 4,      // 16
+// is an integer bit mask with these bit values
+public enum SetupFlag { 
+	Run = 0,                  // 1
+	Perfect = 1,              // 2
+	BadOrientation = 2,       // 4
+	MirrorUncentered = 4,     // 16
 	MirrorMoveLeft = 5,       // 32
 	MirrorMoveRight = 6,      // 64
 	NoMirrorDetected = 7,     // 128
