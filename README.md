@@ -1,5 +1,7 @@
 # Quick-start
 
+See this nicely formatted at https://github.com/tangibleplay/sdk-readme.
+
 See Assets/Examples for examples.
 
 To set up a new project:
@@ -168,7 +170,7 @@ Get all the flags that vision is reporting.
 
 ```csharp
 // is an integer bit mask with these bit values
-public enum SetupFlag { 
+public enum SetupFlag {
 	Run = 0,                  // 1
 	Perfect = 1,              // 2
 	BadOrientation = 2,       // 4
