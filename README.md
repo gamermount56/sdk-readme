@@ -6,7 +6,7 @@ See Assets/Examples for examples.
 
 To set up a new project:
 
-1. Include the OsmoSDK plugin to your project's Plugins/iOS/ folder
+1. Include the OsmoSDK plugin to your project's Plugins/iOS folder
 2. Add the `TangibleManager` script to the scene
   - choose a deck (collection of pieces, like Words, Numbers, Coding) by filling out the `Deck_` outlet
 3. Now you can access the TangibleManager.Instance and use any of the public API to receive information about the physical pieces (TangibleObject).
