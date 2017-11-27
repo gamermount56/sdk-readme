@@ -20,9 +20,11 @@ The SDK supports several Osmo standard decks of physical pieces:
   - Dominocodes - printable barcodes, convenient to prototype new games [(printable link)](./dominocodes.pdf).
 
 # Testing In-Editor
-To play with the pieces in the editor, `TangibleManager` uses the `OnScreenController` to simulate pieces. These pieces are rendered on a separate layer named `TangibleLayer` which is automatically added to the layers of the project.
+To play with and test the pieces in the editor, you can use virtual pieces provided automatically for you. Press the 'S' key to open / close drawers (configurable through the TangibleManager).
 
-The simulated pieces are stored in virtual drawers. You can open / close drawers by pressing 'S' (this is configurable on the TangibleManager). You can grab pieces and place them back inside drawers.
+You can grab pieces by clicking on them. Drag the pieces off the drawers onto the screen to have them appear in the play area.
+
+You can rotate a piece by pressing 'A' and 'D' while grabbed on to it.
 
 
 # API
