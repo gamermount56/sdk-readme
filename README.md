@@ -109,6 +109,8 @@ public readonly int UniqueId;
 
 Given that there can be multiple of the same pieces per deck, `TangibleObject`s have a `UniqueId` which is used to map the vision output to the last closest unique physical piece.
 
+This is a best effort calculation. You will never see two objects with the same `UniqueId`, but you may see see two `UniqueId`s where you would have thought there should have been one (generally worse on older iPads with worse cameras where we cannot keep track of tiles as well).
+
 ## Alive
 ```csharp
 public bool Alive { get; }
@@ -121,7 +123,7 @@ public bool Alive { get; }
 public bool Visible { get; }
 ```
 
-`Visible` means that this piece is in the play area. This **does not** includes persisted pieces that were not in the last vision frame.
+`Visible` means that this piece is in the play area. This **does not** includes persisted pieces that were not in the last vision frame. `Visible` values will flicker on/off as the vision algorithms work with imperfect camera input.
 
 ## Location
 ```csharp
