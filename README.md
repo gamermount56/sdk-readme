@@ -60,7 +60,7 @@ For coding pieces, pressing `W` `A` `S` `D` will set the direction arrow on piec
 
 We provide a set of example scenes which demonstrate various ways to use the SDK. These range from simply dumping out raw data to a small puzzle game using Coding tiles. Explore, mangle, and poke at these to your heart's content.
 
-## Basic Example
+## 1. Basic Example
 `Examples/BasicExample/BasicExampleScene.unity`
 
 A simple example of dumping out values seen by the computer vision to screen. Swap out the Deck of the `TangibleManager` on the scene to use different types of tiles.
@@ -70,7 +70,7 @@ In our `Update()` call of `Tangible.SDKExamples.BasicExample.Game` you will see 
 ![basic_example](Images/Examples/basic.png)
 
 
-## Basic Setup Example
+## 2. Basic Setup Example
 `Examples/BasicNumbers/BasicNumbersScene.unity`
 
 An example of how to use the setup configuration values in order to instruct the user on how to properly set up the Osmo hardware.
@@ -80,21 +80,30 @@ If you are testing this in the editor, look at the `VisionSetup` object in the s
 ![example_basic_setup](Images/Examples/setup.png)
 
 
-## Basic Numbers
+## 3. Basic Numbers
 `Examples/BasicSetupExample/BasicSetupScene.unity`
 
 In this example, we subscribe to the events `OnObjectEnter` and `OnObjectExit` from the `TangibleManager`. In the case of subtraction, we also register for the event `OnLocationChanged` because we need to order by X position when tiles move (even if no new tiles enter or exit the play area)
 
 ![example_basic_numbers](Images/Examples/numbers.png)
 
-## Basic Words
+## 4. Basic Words
 `Examples/BasicWords/BasicWordsScene.unity`
 
 An example of a game which only registers with `OnObjectEnter`. Once a letter has been detected, the game treats it as guessed. `OnObjectExit` is ignored because letters cannot be unguessed.
 
 ![example_basic_words](Images/Examples/words.png)
 
-## Coding Painting
+## 5. Timeline Game
+`Examples/TimelineGame/TimelineScene.unity`
+
+An example game using domino codes. It uses a custom deck (which ignores domino code values that are not used by the game). To play this on device, print out a set of domino codes from `dominocodes.pdf` in the `sdk-readme` directory of the SDK.
+
+In order to make your own custom decks, see the [Deck](#deck) section.
+
+![example_timeline_game](Images/Examples/timeline_game.png)
+
+## 6. Coding Painting
 `Examples/CodingPainting/CodingPaintingScene.unity`
 
 See the [Testing In-Editor](#testing-in-editor) section for how to play in-editor with Coding tiles.
@@ -109,24 +118,17 @@ See `CodingClusterService` for how the game decides what is in a cluster and wha
 
 ![example_coding_painting](Images/Examples/coding_painting.png)
 
-## Coding Valley
+
+## 7. Coding Valley
 `Examples/CodingValley/CodingValleyScene.unity`
 
 See the [Testing In-Editor](#testing-in-editor) section for how to play in-editor with Coding tiles.
 
 An example of a more complete small puzzle game using the Coding tiles.
 
-
 ![example_coding_valley](Images/Examples/coding_valley.png)
 
-## Timeline Game
-`Examples/TimelineGame/TimelineScene.unity`
 
-An example game using domino codes. It uses a custom deck (which ignores domino code values that are not used by the game). To play this on device, print out a set of domino codes from `dominocodes.pdf` in the `sdk-readme` directory of the SDK.
-
-In order to make your own custom decks, see the [Deck](#deck) section.
-
-![example_timeline_game](Images/Examples/timeline_game.png)
 
 # API
 
@@ -329,7 +331,7 @@ If you are testing in editor, you can control the flags sent on your `VisionSetu
 # Future Plans
 We need your help! 
 
-What would you like to see change, added, removed from the SDK?
+What would you like to see change, added, removed from the SDK? What was confusing? What didn't work? What did work?
 
 # Legal
 The latest [SDK License Agreement](https://docs.google.com/document/d/1YK82HsDxKN9U_w3t507ON6N_rN6XuUH8af9n4wB2z5A/edit#)
