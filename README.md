@@ -1,14 +1,18 @@
+# Quick-start Guide
 
-
-# Quick-start
-
-Note: this SDK was tested against Unity 5.6.1f1.
-
-See Assets/Examples for examples.
+## What you'll need
++ Unity (tested against Unity `5.6.1f1`, `5.6.4f1`, and `2071.2f1`)
++ XCode (tested against 8.x and 9.x)
++ An iPad (any iPad [Osmo supports](https://support.playosmo.com/hc/en-us/articles/115009542208-Which-iPad-models-is-Osmo-compatible-with-))
++ Osmo Hardware (base+mirror and any tiles you plan to use)
++ The Osmo SDK
 
 To set up a new project:
 
-1. Download and import the unityPackage to your project ([download link](https://github.com/tangibleplay/sdk/raw/master/OsmoSDKPackage.unitypackage))
+1. Clone the git repo and its subrepos from: [sdk-public](https://github.com/tangibleplay/sdk-public)
+	+ Run `git submodule init` and `git submodule update` to clone subrepos
+2. 
+
 2. Add the `TangibleManager` script to the scene
   - choose a deck (collection of pieces, like Words, Numbers, Coding) by filling out the `Deck_` outlet
 3. Now you can access the TangibleManager.Instance and use any of the public API to receive information about the physical pieces (TangibleObject).
@@ -24,8 +28,83 @@ The SDK supports several Osmo standard decks of physical pieces:
 # Testing In-Editor
 To play with the pieces in the editor, `TangibleManager` uses the `OnScreenController` to simulate pieces. These pieces are rendered on a separate layer named `TangibleLayer` which is automatically added to the layers of the project.
 
-The simulated pieces are stored in virtual drawers. You can open / close drawers by pressing 'S' (this is configurable on the TangibleManager). You can grab pieces and place them back inside drawers.
+The simulated pieces are stored in virtual drawers. You can open / close drawers by pressing `X` (this is configurable on the `TangibleManager`). You can grab pieces and place them back inside drawers.
 
+To rotate pieces, press and hold your mouse button over a tile and hold `A` or `D` to rotate.
+
+For coding pieces, pressing `W` `A` `S` `D` will set the direction arrow on pieces. Pressing `1` `2` `3` `4` `5` will set the quantifier attached. Press `SPACE` to send a 'play' button press.
+
+# Examples
+
+We provide a set of example scenes which demonstrate various ways to use the SDK. These range from simply dumping out raw data to a small puzzle game using Coding tiles. Explore, mangle, and poke at these to your heart's content.
+
+## Basic Example
+`Examples/BasicExample/BasicExampleScene.unity`
+
+A simple example of dumping out values seen by the computer vision to screen. Swap out the Deck of the `TangibleManager` on the scene to use different types of tiles.
+
+In our `Update()` call of `Tangible.SDKExamples.BasicExample.Game` you will see we use the current `AliveObjects` list pulled from the singleton instance of `TangibleManager`.
+
+![basic_example](Images/Examples/basic.png)
+
+
+## Basic Setup Example
+`Examples/BasicNumbers/BasicNumbersScene.unity`
+
+An example of how to use the setup configuration values in order to instruct the user on how to properly set up the Osmo hardware.
+
+If you are testing this in the editor, look at the `VisionSetup` object in the scene. You can modify which flags are sent (see the [`VisionSetup`](#visionsetup) section for more).
+
+![example_basic_setup](Images/Examples/setup.png)
+
+
+## Basic Numbers
+`Examples/BasicSetupExample/BasicSetupScene.unity`
+
+In this example, we subscribe to the events `OnObjectEnter` and `OnObjectExit` from the `TangibleManager`. In the case of subtraction, we also register for the event `OnLocationChanged` because we need to order by X position when tiles move (even if no new tiles enter or exit the play area)
+
+![example_basic_numbers](Images/Examples/numbers.png)
+
+## Basic Words
+`Examples/BasicWords/BasicWordsScene.unity`
+
+An example of a game which only registers with `OnObjectEnter`. Once a letter has been detected, the game treats it as guessed. `OnObjectExit` is ignored because letters cannot be unguessed.
+
+![example_basic_words](Images/Examples/words.png)
+
+## Coding Painting
+`Examples/CodingPainting/CodingPaintingScene.unity`
+
+See the [Testing In-Editor](#testing-in-editor) section for how to play in-editor with Coding tiles.
+
+The game of life, using coding tiles to seed different species on the board.
+
+This game uses Coding tiles, and the `ClusterManager`. It uses the most simple decision of what cluster to use by always choosing the largest one.
+
+The `ClusterManager` subscribes to the `OnUpdatedTangibleObjects` event which fires an event every time the computer vision returns with a new set of data. The rate at which this happens is not the same as your Unity update rate. It’s generally 10-20 times per second on a newer iPad.
+
+See `CodingClusterService` for how the game decides what is in a cluster and what is not.
+
+![example_coding_painting](Images/Examples/coding_painting.png)
+
+## Coding Valley
+`Examples/CodingValley/CodingValleyScene.unity`
+
+See the [Testing In-Editor](#testing-in-editor) section for how to play in-editor with Coding tiles.
+
+An example of a more complete small puzzle game using the Coding tiles.
+
+
+![example_coding_valley](Images/Examples/coding_valley.png)
+
+## Timeline Game
+`Examples/TimelineGame/TimelineScene.unity`
+
+An example game using domino codes. It uses a custom deck (which ignores domino code values that are not used by the game). To play this on device, print out a set of domino codes from `dominocodes.pdf` in the `sdk-readme` directory of the SDK.
+
+In order to make your own custom decks, see the [Deck](#deck) section.
+
+![example_timeline_game](Images/Examples/timeline_game.png)
 
 # API
 
