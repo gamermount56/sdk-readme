@@ -1,4 +1,5 @@
 
+
 # Quick-start
 
 Note: this SDK was tested against Unity 5.6.1f1.
@@ -145,7 +146,10 @@ public class Location {
 
 To debug what the vision is seeing on device, we have provided a class called `TangibleDebugOverlay` which has two methods `Show()` and `Hide()`. You can show the debug overlay at anytime to display ghost tiles on the screen matching the `TangibleObject`s active in `TangibleManager`.
 
-You can toggle the TangibleDebugOverlay through the editor panel that appears when you press 'S'.
+You can toggle the TangibleDebugOverlay through the editor panel that appears when you press 'S'. Use the "Debug Overlay" checkmark at the bottom. You'll see the raw id values overlayed on top of the tiles you are manipulating.
+
+![debug-overlay](Images/TangibleDebugOverlay/hidden.png)
+![debug-overlay](Images/TangibleDebugOverlay/shown.png)
 
 ## Show
 ```csharp
@@ -203,7 +207,7 @@ public enum SetupFlag {       // an integer bit mask with these bit values
 	PushMirrorDown = 8,       // 256
 	NoMotionData = 12,        // 4,096
 	OsmoBoardDetected = 16,   // 65,536
-	Error = 31,               // 4,294,967,295
+	Error = 31,               // 2,147,483,648
 }
 ```
 
