@@ -54,6 +54,8 @@ To rotate pieces, press and hold your mouse button over a tile and hold `A` or `
 
 For coding pieces, pressing `W` `A` `S` `D` will set the direction arrow on pieces. Pressing `1` `2` `3` `4` `5` will set the quantifier attached. Press `SPACE` to send a 'play' button press.
 
+![testing_editor_controls](Images/TestingInEditor/onscreencontroller.png)
+
 # Examples
 
 We provide a set of example scenes which demonstrate various ways to use the SDK. These range from simply dumping out raw data to a small puzzle game using Coding tiles. Explore, mangle, and poke at these to your heart's content.
