@@ -5,17 +5,37 @@
 + XCode (tested against 8.x and 9.x)
 + An iPad (any iPad [Osmo supports](https://support.playosmo.com/hc/en-us/articles/115009542208-Which-iPad-models-is-Osmo-compatible-with-))
 + Osmo Hardware (base+mirror and any tiles you plan to use)
-+ The Osmo SDK
++ The Osmo SDK (see below for how to download)
 
-To set up a new project:
-
+## Getting started with a Hello World app
 1. Clone the git repo and its subrepos from: [sdk-public](https://github.com/tangibleplay/sdk-public)
 	+ Run `git submodule init` and `git submodule update` to clone subrepos
-2. 
+2. Copy the `Plugins` folder from `sdk-public` into your **top level** `Assets` folder.
+	+ It's important you put this in your top level `Assets` folder because the `Assets/Plugins/iOS` path will be pushed into the generated XCode project after the Unity build is complete.
+	+ Optionally, copy the `Examples` folder if you want to view our SDK Example scenes.
+3. Create a new Unity project and scene (or use an existing one in your game if you already have it set up)
+4. Create a new game object on your scene hierarchy. Name it "TangibleManager"
+	+ Add the script `TangibleManager` to it
+5. In the `TangibleManager` inspector, add a `Deck_` (these enable different tile sets such as Words, Numbers, or Coding)
+	+ Find these in `Plugins/iOS/OsmoDecks`
+	+ For now, let's add `OsmoCaseWords`
+6. Create a new game object on your scene hierarchy. Name it "DumpTangibleData"
+	+ Create a new script and call it "DumpTangibleData" also, start editing it
+7. Add `using System.Linq` to the usings
+8. Add the following to the `Update` function:
+	`Tangible.SDK.TangibleManager.Instance.AliveObjects.ToList().ForEach(x => Debug.Log(x.ToString()));`
+9. Press play
+10. Hover your mouse over the left hand side of the game view and press `X`
+11. Drag a tile (what tiles you see here depends on the Deck you chose in step `5`
+12. Watch your console log, observe the dumped out debug information
 
-2. Add the `TangibleManager` script to the scene
-  - choose a deck (collection of pieces, like Words, Numbers, Coding) by filling out the `Deck_` outlet
-3. Now you can access the TangibleManager.Instance and use any of the public API to receive information about the physical pieces (TangibleObject).
+## Getting your app on an iPad
+1. Change your Unity build target to iOS: `File -> Build Settings -> iOS`
+2. Create the XCode project: `File -> Build Settings -> Build`
+3. Wait for the build to complete and open up the generated XCode project
+4. Attach an iPad to your computer via  USB
+5. Switch "Generic iOS Device" to your iPad
+6. Hit play to build and install the app to your iPad
 
 # Available Decks
 
@@ -303,6 +323,11 @@ If you are testing in editor, you can control the flags sent on your `VisionSetu
 
 ![vision_setup_unity_flags](Images/VisionSetup/unity_flags.png)
 
+
+# Future Plans
+We need your help! 
+
+What would you like to see change, added, removed from the SDK?
 
 # Legal
 The latest [SDK License Agreement](https://docs.google.com/document/d/1YK82HsDxKN9U_w3t507ON6N_rN6XuUH8af9n4wB2z5A/edit#)
