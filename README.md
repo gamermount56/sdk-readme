@@ -1,12 +1,13 @@
+
 # Quick-start
 
-See this nicely formatted at https://github.com/tangibleplay/sdk-readme.
+Note: this SDK was tested against Unity 5.6.1f1.
 
 See Assets/Examples for examples.
 
 To set up a new project:
 
-1. Include the OsmoSDK plugin to your project's Plugins/iOS folder
+1. Download and import the unityPackage to your project ([download link](https://github.com/tangibleplay/sdk/raw/master/OsmoSDKPackage.unitypackage))
 2. Add the `TangibleManager` script to the scene
   - choose a deck (collection of pieces, like Words, Numbers, Coding) by filling out the `Deck_` outlet
 3. Now you can access the TangibleManager.Instance and use any of the public API to receive information about the physical pieces (TangibleObject).
@@ -20,19 +21,19 @@ The SDK supports several Osmo standard decks of physical pieces:
   - Dominocodes - printable barcodes, convenient to prototype new games [(printable link)](./dominocodes.pdf).
 
 # Testing In-Editor
-To play with and test the pieces in the editor, you can use virtual pieces provided automatically for you. Press the 'S' key to open / close drawers (configurable through the TangibleManager).
+To play with the pieces in the editor, `TangibleManager` uses the `OnScreenController` to simulate pieces. These pieces are rendered on a separate layer named `TangibleLayer` which is automatically added to the layers of the project.
 
-You can grab pieces by clicking on them. Drag the pieces off the drawers onto the screen to have them appear in the play area.
-
-You can rotate a piece by pressing 'A' and 'D' while grabbed on to it.
+The simulated pieces are stored in virtual drawers. You can open / close drawers by pressing 'S' (this is configurable on the TangibleManager). You can grab pieces and place them back inside drawers.
 
 
 # API
 
 # TangibleManager
+- [TangibleManager.AliveObjects](#aliveobjects)
 - [TangibleManager.OnObjectEnter](#onobjectenter)
 - [TangibleManager.OnObjectExit](#onobjectexit)
-- [TangibleManager.AliveObjects](#aliveobjects)
+- [TangibleManager.OnUpdatedTangibleObjects](#onupdatedtangibleobjects)
+- [TangibleManager.Mute](#mute)
 
 `TangibleManager` is the main interface to the OsmoSDK. You can access all the `TangibleObject`s here which represent the physical pieces.
 
@@ -41,6 +42,14 @@ The class implements multiple ways of generating the input, primarily:
   - Otherwise, it will use the `PhysicalController` which relies on the `VisionFramework` and the camera input.
 
 <br>
+
+## AliveObjects
+```csharp
+public IEnumerable<TangibleObject> AliveObjects { get; }
+```
+
+All `TangibleObject`s that are `Alive`. This is useful if you are starting up some level and want to know if vision already has some recognized pieces.
+
 
 ## OnObjectEnter
 ```csharp
@@ -54,16 +63,26 @@ Invoked whenever a `TangibleObject` becomes `Alive`. This is the case when the p
 public event Action<TangibleObject> OnObjectExit;
 ```
 
-Invoked whenever a `TangibleObject` becomes not `Alive`. This happens when the piece is no longer recognized by vision and after a certain amount of time / frames have passed.
+Invoked whenever a `TangibleObject` becomes not `Alive`. This happens when the piece is no longer recognized by vision and after a certain amount of time / frames have passed. You can modify how long this takes by changing the values on your `TangibleManager` MonoBehaviour on your scene.
 
 The `TangibleObject` persists because the piece can disappear from vision for a couple frames due to any number of factors including obstruction from hands, etc.
 
-## AliveObjects
+## OnUpdatedTangibleObjects
 ```csharp
-public IEnumerable<TangibleObject> AliveObjects { get; }
+public event Action OnUpdatedTangibleObjects;
 ```
 
-All `TangibleObject`s that are `Alive`. This is useful if you are starting up some level and want to know if vision already has some recognized pieces.
+Invoked whenever the `VisionFramework` has processed and returned new data. The `VisionFramework` does NOT run in lockstep with Unity, it is completely asynchronous.
+
+It will generally run at approximately 10-20 frames per second, but on older devices it may be even slower (especially if you are doing a lot of CPU processing in Unity).
+
+
+## Mute
+```csharp
+public void Mute(bool mute);
+```
+
+Muting the `VisionFramework` will disable all computer vision processing until you unmute. This is useful if you want to save CPU resources when you don't need any data from the `VisionFramework` (such as if you're on a home screen or a settings screen).
 
 
 # TangibleObject
@@ -126,6 +145,8 @@ public class Location {
 
 To debug what the vision is seeing on device, we have provided a class called `TangibleDebugOverlay` which has two methods `Show()` and `Hide()`. You can show the debug overlay at anytime to display ghost tiles on the screen matching the `TangibleObject`s active in `TangibleManager`.
 
+You can toggle the TangibleDebugOverlay through the editor panel that appears when you press 'S'.
+
 ## Show
 ```csharp
 public static void Show();
@@ -153,12 +174,11 @@ We have provided basic UI for dealing with setup flags that require user action.
 public void SetState(VisionSetupState state);
 ```
 
-For performance reasons, you can set the state to be InActive, Passive, or Active. InActive means that vision setup is not checking for new data. Passive means that vision setup will check for new data every 100 vision frames. Active means that vision setup will check for new data every vision frame.
+For performance reasons, you can set the state to be Inactive or Active. Inactive means that vision setup is not checking for new data. Active means that vision setup will check for new data every vision frame.
 
 ```csharp
 public enum VisionSetupState {
 	Inactive,
-	Passive,
 	Active,
 }
 ```
@@ -168,11 +188,11 @@ public enum VisionSetupState {
 public ReadOnlyCollection<SetupFlag> GetSetupFlags();
 ```
 
-Get all the flags that vision is reporting.
+Get all the flags that vision is reporting. You can parse this in order to display to the user how you want them to correct the incorrect base/mirror setup.
 
 ```csharp
-// is an integer bit mask with these bit values
-public enum SetupFlag {
+
+public enum SetupFlag {       // an integer bit mask with these bit values
 	Run = 0,                  // 1
 	Perfect = 1,              // 2
 	BadOrientation = 2,       // 4
@@ -181,8 +201,13 @@ public enum SetupFlag {
 	MirrorMoveRight = 6,      // 64
 	NoMirrorDetected = 7,     // 128
 	PushMirrorDown = 8,       // 256
-	NoMotionData = 12,        // 4096
-	OsmoBoardDetected = 16,   // 65536
-	Error = 31,
+	NoMotionData = 12,        // 4,096
+	OsmoBoardDetected = 16,   // 65,536
+	Error = 31,               // 4,294,967,295
 }
 ```
+
+# Legal
+The latest [SDK License Agreement](https://docs.google.com/document/d/1YK82HsDxKN9U_w3t507ON6N_rN6XuUH8af9n4wB2z5A/edit#)
+
+For any other questions, contact sdk@playosmo.com
