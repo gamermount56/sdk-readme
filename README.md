@@ -121,7 +121,7 @@ The class implements multiple ways of generating the input, primarily:
   - If the game is running in the Unity Editor, it will use the `OnScreenController` which simulates pieces.
   - Otherwise, it will use the `PhysicalController` which relies on the `VisionFramework` and the camera input.
 
-<br>
+![tangible_manager_inspector](Images/TangibleManager/inspector.png)
 
 ## AliveObjects
 ```csharp
