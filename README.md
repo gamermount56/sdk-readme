@@ -148,8 +148,8 @@ To debug what the vision is seeing on device, we have provided a class called `T
 
 You can toggle the TangibleDebugOverlay through the editor panel that appears when you press 'S'. Use the "Debug Overlay" checkmark at the bottom. You'll see the raw id values overlayed on top of the tiles you are manipulating.
 
-![debug-overlay](Images/TangibleDebugOverlay/hidden.png)
-![debug-overlay](Images/TangibleDebugOverlay/shown.png)
+![debug_overlay_hidden](Images/TangibleDebugOverlay/hidden.png)
+![debug_overlay_shown](Images/TangibleDebugOverlay/shown.png)
 
 ## Show
 ```csharp
@@ -173,6 +173,14 @@ Using computer vision, we can detect if the device is setup properly and prompt 
 
 We have provided basic UI for dealing with setup flags that require user action. To use it, add the `BuiltInSetupUI` script to your scene.
 
+![vision_setup_fullscreen](Images/VisionSetup/fullscreen.png)
+![vision_setup_passive](Images/VisionSetup/passive.png)
+
+To customize the visuals, look at these prefabs (Modify if you are using fullscreen setup or not in the `SetupUI` child of `VisionSetup`)
++ `BuiltInSetupFlagConstant` - Points to images used by the prefabs below
++ `BuiltInSetupUIDropdown` - Prefab used for the non-blocking setup dropdown
++ `BuiltInSetupUIFullScreen` - Prefab used for the blocking full screen setup
+
 ## SetState
 ```csharp
 public void SetState(VisionSetupState state);
@@ -195,7 +203,6 @@ public ReadOnlyCollection<SetupFlag> GetSetupFlags();
 Get all the flags that vision is reporting. You can parse this in order to display to the user how you want them to correct the incorrect base/mirror setup.
 
 ```csharp
-
 public enum SetupFlag {       // an integer bit mask with these bit values
 	Run = 0,                  // 1
 	Perfect = 1,              // 2
@@ -210,6 +217,11 @@ public enum SetupFlag {       // an integer bit mask with these bit values
 	Error = 31,               // 2,147,483,648
 }
 ```
+
+If you are testing in editor, you can control the flags sent on your `VisionSetup` object.
+
+![vision_setup_unity_flags](Images/VisionSetup/unity_flags.png)
+
 
 # Legal
 The latest [SDK License Agreement](https://docs.google.com/document/d/1YK82HsDxKN9U_w3t507ON6N_rN6XuUH8af9n4wB2z5A/edit#)
