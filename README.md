@@ -10,15 +10,23 @@
 ## Getting started with a Hello World app
 1. Clone the git repo and its subrepos from: [sdk-public](https://github.com/tangibleplay/sdk-public)
 	+ Run `git submodule init` and `git submodule update` to clone subrepos
+![quickstart_gitclone](Images/QuickStart/gitclone.png)
+
 2. Copy the `Plugins` folder from `sdk-public` into your **top level** `Assets` folder.
 	+ It's important you put this in your top level `Assets` folder because the `Assets/Plugins/iOS` path will be pushed into the generated XCode project after the Unity build is complete.
 	+ Optionally, copy the `Examples` folder if you want to view our SDK Example scenes.
+![quickstart_unityproj](Images/QuickStart/unityproj.png)
+
 3. Create a new Unity project and scene (or use an existing one in your game if you already have it set up)
 4. Create a new game object on your scene hierarchy. Name it "TangibleManager"
 	+ Add the script `TangibleManager` to it
+![quickstart_unityproj](Images/QuickStart/tangiblemanager.png)
+
 5. In the `TangibleManager` inspector, add a `Deck_` (these enable different tile sets such as Words, Numbers, or Coding)
 	+ Find these in `Plugins/iOS/OsmoDecks`
 	+ For now, let's add `OsmoCaseWords`
+![quickstart_deck](Images/QuickStart/deck.png)
+
 6. Create a new game object on your scene hierarchy. Name it "DumpTangibleData"
 	+ Create a new script and call it "DumpTangibleData" also, start editing it
 7. Add `using System.Linq` to the usings
@@ -26,8 +34,11 @@
 	`Tangible.SDK.TangibleManager.Instance.AliveObjects.ToList().ForEach(x => Debug.Log(x.ToString()));`
 9. Press play
 10. Hover your mouse over the left hand side of the game view and press `X`
+![quickstart_play](Images/QuickStart/play.png)
+
 11. Drag a tile (what tiles you see here depends on the Deck you chose in step `5`
 12. Watch your console log, observe the dumped out debug information
+![quickstart_log](Images/QuickStart/log.png)
 
 ## Getting your app on an iPad
 1. Change your Unity build target to iOS: `File -> Build Settings -> iOS`
