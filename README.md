@@ -6,6 +6,7 @@
 + An iPad (any iPad [Osmo supports](https://support.playosmo.com/hc/en-us/articles/115009542208-Which-iPad-models-is-Osmo-compatible-with-))
 + Osmo Hardware (base+mirror and any tiles you plan to use)
 + The Osmo SDK (see below for how to download)
++ An Osmo API Key (it should look like this `01234567-89AB-CDEF-0123-456789ABCDEF`)
 
 ## Getting started with a Hello World app
 1. Clone the git repo and its subrepos from: [sdk-public](https://github.com/tangibleplay/sdk-public)
@@ -28,6 +29,7 @@
 5. In the `TangibleManager` inspector, add a `Deck_` (these enable different tile sets such as Words, Numbers, or Coding)
 	+ Find these in `Plugins/iOS/OsmoDecks`
 	+ For now, let's add `OsmoCaseWords`
+	+ Paste in your API Key into the `apiKey_` field in the inspector (or you can edit it in `Assets/Plugins/ApiKey.cs`)
 
 ![quickstart_deck](Images/QuickStart/deck.png)
 
@@ -53,6 +55,8 @@
 4. Attach an iPad to your computer via  USB
 5. Switch "Generic iOS Device" to your iPad
 6. Hit play to build and install the app to your iPad
+7. While in the app, use your Osmo base/mirror to detect actual tiles. You can also tap with 3 fingers to bring up the onscreen controller.
+
 
 # Available Decks
 
@@ -148,6 +152,26 @@ An example of a more complete small puzzle game using the Coding tiles.
 
 
 # API
+
+# API Key
+
+You should have recieved a private API Key along with your Osmo SDK download. This uniquely identifies you and should not be shared publicly.
+
+It should look like this: `01234567-89AB-CDEF-0123-456789ABCDEF`
+
+You have two options on how to enter this API Key in your Unity project.
+
+You can paste it directly into `Assets/Plugins/ApiKey.cs`
+```csharp
+namespace Tangible.SDK.Vision {
+	public static class API {
+		public static string Key = "00000000-0000-0000-0000-000000000000";
+	}
+}
+```
+
+You can set it in the inspector in your `TangibleManager` (see below). Values set in the inspector will take precedence over values set in `ApiKey.cs`.
+
 
 # TangibleManager
 - [TangibleManager.AliveObjects](#aliveobjects)
