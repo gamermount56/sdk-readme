@@ -375,6 +375,16 @@ We need your help!
 What would you like to see change, added, removed from the SDK? What was confusing? What didn't work? What did work?
 
 # Legal
-The latest [SDK License Agreement](https://docs.google.com/document/d/1YK82HsDxKN9U_w3t507ON6N_rN6XuUH8af9n4wB2z5A/edit#)
+The latest [SDK License Agreement](https://docs.google.com/document/d/1YK82HsDxKN9U_w3t507ON6N_rN6XuUH8af9n4wB2z5A)
 
-For any other questions, contact sdk@playosmo.com
+## License Summary
+
++ You should really read the full license, it is not that long.
+
+<!---
++ Do not share *Confidential Information* information on the Osmo SDK publicly or to other parties that have not signed the SDK License
++ This license does *NOT* allow you to publish a commercial or free application. If you wish to do this, please contact us.
++ We provide the Osmo SDK 'As Is'
+-->
+
+For any other questions, contact sdk@playosmo.com or send a message on the TangiblePlay SDK slack channel you should have been invited to
