@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" media="all" href="sytle.css" />
-
 # Quick-start Guide
 
 ## What you'll need
@@ -17,25 +15,25 @@
 
 3. (a) If you are using `osmosdk-<date>.unitypackage`, open it from your file explorer and let it install.
 
-![quickstart_gitclone](Images/QuickStart/unitypackage.png?style=center)
+![quickstart_gitclone](Images/QuickStart/unitypackage.png)
 
 3. (b) If you are using the `osmosdk-<date>.zip`, extract it to a temporary location and then copy both the `Plugins` and `Examples` (optional) to your **top level** `Assets` Unity folder.
 	+ It's important you put this in your top level `Assets` folder because the `Assets/Plugins/iOS` path will be pushed into the generated XCode project after the Unity build is complete.
 	+ The SDK only needs what is in the `Plugins` folder. The `Examples` folder is there if you want to view our SDK Example scenes (see Examples section below).
 
-![quickstart_unityproj](Images/QuickStart/unityproj.png?style=center)
+![quickstart_unityproj](Images/QuickStart/unityproj.png)
 
 4. Create a new game object on your scene hierarchy. Name it "TangibleManager"
 	+ Add the script `TangibleManager` to it
 
-![quickstart_unityproj](Images/QuickStart/tangiblemanager.png?style=center)
+![quickstart_unityproj](Images/QuickStart/tangiblemanager.png)
 
 5. In the `TangibleManager` inspector, add a `Deck_` (these enable different tile sets such as Words, Numbers, or Coding)
 	+ Find these in `Plugins/iOS/OsmoDecks` (or hit the `Assets` on the `Select Deck` window)
 	+ For now, let's add `OsmoCaseWords`
 	+ Paste in your API Key into the `apiKey_` field in the inspector (or you can edit it in `Assets/Plugins/ApiKey.cs`)
 
-![quickstart_deck](Images/QuickStart/deck.png?style=center)
+![quickstart_deck](Images/QuickStart/deck.png)
 
 6. Create a new game object on your scene hierarchy. Name it "DumpTangibleData"
 
@@ -48,13 +46,13 @@
 10. Hover your mouse over the right (or left) hand side of the game view and press `X`
 	+ Each side of the screen will bring up a different half of the tiles available in the current deck.
 
-![quickstart_play](Images/QuickStart/play.png?style=center)
+![quickstart_play](Images/QuickStart/play.png)
 
 11. Drag a tile (what tiles you see here depends on the Deck you chose in step `5`) from this overlay to the center of the screen.
 
 12. Watch your console log, observe the dumped out debug information
 
-![quickstart_log](Images/QuickStart/log.png?style=center)
+![quickstart_log](Images/QuickStart/log.png)
 
 13. Congratulations! You've made your first Osmo App (=
 
@@ -65,17 +63,17 @@
 
 2. Create the XCode project: `File -> Build Settings -> Build` (we generally put them in a `builds` folder inside the unity project which you can then `.gitignore`)
 
-![build_ipad](Images/BuildIpad/buildsettings.png?style=center)
+![build_ipad](Images/BuildIpad/buildsettings.png)
 
 3. Wait for the build to complete and open up the generated XCode project
 
-![build_ipad](Images/BuildIpad/xcodeproj.png?style=center)
+![build_ipad](Images/BuildIpad/xcodeproj.png)
 
 4. Attach an iPad to your computer via USB
 
 5. Switch "Generic iOS Device" to your iPad
 
-![build_ipad](Images/BuildIpad/xcodedevice.png?style=center)
+![build_ipad](Images/BuildIpad/xcodedevice.png)
 
 6. Hit play to build and install the app to your iPad
 
@@ -83,7 +81,7 @@
 
 You can also tap with 3 fingers to bring up the onscreen controller.
 
-![build_ipad](Images/BuildIpad/physical.jpg?style=center)
+![build_ipad](Images/BuildIpad/physical.jpg)
 
 
 # Available Decks
@@ -102,25 +100,25 @@ If you want to change what tiles are detected (such as if you only care about BL
 
 In Unity, in your menu bar select `Assets -> Create -> OsmoDecks`. You will see each type of base Deck that we support.
 
-![customized_decks](Images/CustomizedDecks/create.png?style=center)
+![customized_decks](Images/CustomizedDecks/create.png)
 
 Select the deck type you want to start with.
 
 ## CaseWords
 
-![customized_decks](Images/CustomizedDecks/words.png?style=center)
+![customized_decks](Images/CustomizedDecks/words.png)
 
 ## Coding
 
-![customized_decks](Images/CustomizedDecks/coding.png?style=center)
+![customized_decks](Images/CustomizedDecks/coding.png)
 
 ## Numbers
 
-![customized_decks](Images/CustomizedDecks/numbers.png?style=center)
+![customized_decks](Images/CustomizedDecks/numbers.png)
 
 ## DominoCode
 
-![customized_decks](Images/CustomizedDecks/dominocode.png?style=center)
+![customized_decks](Images/CustomizedDecks/dominocode.png)
 
 
 
@@ -133,7 +131,7 @@ To rotate pieces, press and hold your mouse button over a tile and hold `A` or `
 
 For coding pieces, pressing `W` `A` `S` `D` will set the direction arrow on pieces. Pressing `1` `2` `3` `4` `5` will set the quantifier attached. Press `SPACE` to send a 'play' button press.
 
-![testing_editor_controls](Images/TestingInEditor/onscreencontroller.png?style=center)
+![testing_editor_controls](Images/TestingInEditor/onscreencontroller.png)
 
 
 # Examples
@@ -147,7 +145,7 @@ A simple example of dumping out values seen by the computer vision to screen. Sw
 
 In our `Update()` call of `Tangible.SDKExamples.BasicExample.Game` you will see we use the current `AliveObjects` list pulled from the singleton instance of `TangibleManager`.
 
-![basic_example](Images/Examples/basic.png?style=center)
+![basic_example](Images/Examples/basic.png)
 
 
 ## 2. Basic Setup Example
@@ -157,7 +155,7 @@ An example of how to use the setup configuration values in order to instruct the
 
 If you are testing this in the editor, look at the `VisionSetup` object in the scene. You can modify which flags are sent (see the [`VisionSetup`](#visionsetup) section for more).
 
-![example_basic_setup](Images/Examples/setup.png?style=center)
+![example_basic_setup](Images/Examples/setup.png)
 
 
 ## 3. Basic Numbers
@@ -165,14 +163,14 @@ If you are testing this in the editor, look at the `VisionSetup` object in the s
 
 In this example, we subscribe to the events `OnObjectEnter` and `OnObjectExit` from the `TangibleManager`. In the case of subtraction, we also register for the event `OnLocationChanged` because we need to order by X position when tiles move (even if no new tiles enter or exit the play area)
 
-![example_basic_numbers](Images/Examples/numbers.png?style=center)
+![example_basic_numbers](Images/Examples/numbers.png)
 
 ## 4. Basic Words
 `Examples/BasicWords/BasicWordsScene.unity`
 
 An example of a game which only registers with `OnObjectEnter`. Once a letter has been detected, the game treats it as guessed. `OnObjectExit` is ignored because letters cannot be unguessed.
 
-![example_basic_words](Images/Examples/words.png?style=center)
+![example_basic_words](Images/Examples/words.png)
 
 ## 5. Timeline Game
 `Examples/TimelineGame/TimelineScene.unity`
@@ -181,7 +179,7 @@ An example game using domino codes. It uses a custom deck (which ignores domino 
 
 In order to make your own custom decks, see the [Customizing Deck](#customizingdecks) section.
 
-![example_timeline_game](Images/Examples/timeline_game.png?style=center)
+![example_timeline_game](Images/Examples/timeline_game.png)
 
 ## 6. Coding Painting
 `Examples/CodingPainting/CodingPaintingScene.unity`
@@ -196,7 +194,7 @@ The `ClusterManager` subscribes to the `OnUpdatedTangibleObjects` event which fi
 
 See `CodingClusterService` for how the game decides what is in a cluster and what is not.
 
-![example_coding_painting](Images/Examples/coding_painting.png?style=center)
+![example_coding_painting](Images/Examples/coding_painting.png)
 
 
 ## 7. Coding Valley
@@ -206,7 +204,7 @@ See the [Testing In-Editor](#testing-in-editor) section for how to play in-edito
 
 An example of a more complete small puzzle game using the Coding tiles.
 
-![example_coding_valley](Images/Examples/coding_valley.png?style=center)
+![example_coding_valley](Images/Examples/coding_valley.png)
 
 
 # API
@@ -244,7 +242,7 @@ The class implements multiple ways of generating the input, primarily:
   - If the game is running in the Unity Editor, it will use the `OnScreenController` which simulates pieces.
   - Otherwise, it will use the `PhysicalController` which relies on the `VisionFramework` and the camera input.
 
-![tangible_manager_inspector](Images/TangibleManager/inspector.png?style=center)
+![tangible_manager_inspector](Images/TangibleManager/inspector.png)
 
 ### AliveObjects
 ```csharp
@@ -352,8 +350,8 @@ To debug what the vision is seeing on device, we have provided a class called `T
 
 You can toggle the TangibleDebugOverlay through the editor panel that appears when you press 'S'. Use the "Debug Overlay" checkmark at the bottom. You'll see the raw id values overlayed on top of the tiles you are manipulating.
 
-![debug_overlay_hidden](Images/TangibleDebugOverlay/hidden.png?style=center)
-![debug_overlay_shown](Images/TangibleDebugOverlay/shown.png?style=center)
+![debug_overlay_hidden](Images/TangibleDebugOverlay/hidden.png)
+![debug_overlay_shown](Images/TangibleDebugOverlay/shown.png)
 
 ### Show
 ```csharp
@@ -377,8 +375,8 @@ Using computer vision, we can detect if the device is setup properly and prompt 
 
 We have provided basic UI for dealing with setup flags that require user action. To use it, add the `BuiltInSetupUI` script to your scene.
 
-![vision_setup_fullscreen](Images/VisionSetup/fullscreen.png?style=center)
-![vision_setup_passive](Images/VisionSetup/passive.png?style=center)
+![vision_setup_fullscreen](Images/VisionSetup/fullscreen.png)
+![vision_setup_passive](Images/VisionSetup/passive.png)
 
 To customize the visuals, look at these prefabs (Modify if you are using fullscreen setup or not in the `SetupUI` child of `VisionSetup`)
 + `BuiltInSetupFlagConstant` - Points to images used by the prefabs below
@@ -424,7 +422,7 @@ public enum SetupFlag {       // an integer bit mask with these bit values
 
 If you are testing in editor, you can control the flags sent on your `VisionSetup` object.
 
-![vision_setup_unity_flags](Images/VisionSetup/unity_flags.png?style=center)
+![vision_setup_unity_flags](Images/VisionSetup/unity_flags.png)
 
 
 # Debugging
