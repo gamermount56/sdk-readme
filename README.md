@@ -1,7 +1,7 @@
 # Quick-start Guide
 
 ## What you'll need
-+ Unity (tested against Unity `5.6.1f1`, `5.6.4f1`, and `2071.2f1`)
++ Unity (tested against Unity `5.6.4f1`, and `2071.2f1`)
 + XCode (tested against 8.x and 9.x)
 + An iPad (any iPad [Osmo supports](https://support.playosmo.com/hc/en-us/articles/115009542208-Which-iPad-models-is-Osmo-compatible-with-))
 + Osmo Hardware ([Base+Reflector](https://www.playosmo.com/en/shopping/?overlay=osmo_game_system+osmo_base_ipad) and tiles you want to use from the set: [Words](https://www.playosmo.com/en/words/), [Numbers](https://www.playosmo.com/en/numbers/), [Coding Awbie](https://www.playosmo.com/en/coding/), [Coding Jam](https://www.playosmo.com/en/coding-jam/), [Domino Codes](https://github.com/tangibleplay/sdk-readme/blob/master/dominocodes.pdf))
@@ -13,11 +13,11 @@
 
 2. Create a new Unity project (or create a new scene on an existing project you have set up)
 
-3a. If you are using `osmosdk-<date>.unitypackage`, open it from your file explorer and let it install.
+3. (a) If you are using `osmosdk-<date>.unitypackage`, open it from your file explorer and let it install.
 
 ![quickstart_gitclone](Images/QuickStart/unitypackage.png)
 
-3b. If you are using the `osmosdk-<date>.zip`, extract it to a temporary location and then copy both the `Plugins` and `Examples` (optional) to your **top level** `Assets` Unity folder.
+3. (b) If you are using the `osmosdk-<date>.zip`, extract it to a temporary location and then copy both the `Plugins` and `Examples` (optional) to your **top level** `Assets` Unity folder.
 	+ It's important you put this in your top level `Assets` folder because the `Assets/Plugins/iOS` path will be pushed into the generated XCode project after the Unity build is complete.
 	+ The SDK only needs what is in the `Plugins` folder. The `Examples` folder is there if you want to view our SDK Example scenes (see Examples section below).
 
@@ -36,20 +36,19 @@
 ![quickstart_deck](Images/QuickStart/deck.png)
 
 6. Create a new game object on your scene hierarchy. Name it "DumpTangibleData"
-	+ Create a new script and call it "DumpTangibleData" also, start editing it
 
-7. Add `using System.Linq` to the usings
-
-8. Add the following to the `Update` function:
-	`Tangible.SDK.TangibleManager.Instance.AliveObjects.ToList().ForEach(x => Debug.Log(x.ToString()));`
+7. Create a new script and call it "DumpTangibleData" also, start editing it
+	+ Add `using System.Linq` to the usings
+	+ Add the following to the `Update` function: `Tangible.SDK.TangibleManager.Instance.AliveObjects.ToList().ForEach(x => Debug.Log(x.ToString()));`
 
 9. Press Play!
 
-10. Hover your mouse over the left hand side of the game view and press `X`
+10. Hover your mouse over the right (or left) hand side of the game view and press `X`
+	+ Each side of the screen will bring up a different half of the tiles available in the current deck.
 
 ![quickstart_play](Images/QuickStart/play.png)
 
-11. Drag a tile (what tiles you see here depends on the Deck you chose in step `5`)
+11. Drag a tile (what tiles you see here depends on the Deck you chose in step `5`) from this overlay to the center of the screen.
 
 12. Watch your console log, observe the dumped out debug information
 
@@ -57,21 +56,32 @@
 
 13. Congratulations! You've made your first Osmo App (=
 
+
 ## Getting your app on an iPad
 
 1. Change your Unity build target to iOS: `File -> Build Settings -> iOS`
 
-2. Create the XCode project: `File -> Build Settings -> Build`
+2. Create the XCode project: `File -> Build Settings -> Build` (we generally put them in a `builds` folder inside the unity project which you can then `.gitignore`)
+
+![build_ipad](Images/BuildIpad/buildsettings.png)
 
 3. Wait for the build to complete and open up the generated XCode project
+
+![build_ipad](Images/BuildIpad/xcodeproj.png)
 
 4. Attach an iPad to your computer via USB
 
 5. Switch "Generic iOS Device" to your iPad
 
+![build_ipad](Images/BuildIpad/xcodedevice.png)
+
 6. Hit play to build and install the app to your iPad
 
-7. While in the app, use your Osmo base/mirror to detect actual tiles. You can also tap with 3 fingers to bring up the onscreen controller.
+7. While in the app, use your Osmo Base/Mirror (you should be able to leave the lightning cable attached while it's in the base) to detect actual tiles.
+
+You can also tap with 3 fingers to bring up the onscreen controller.
+
+![build_ipad](Images/BuildIpad/physical.jpg)
 
 
 # Available Decks
@@ -81,6 +91,35 @@ The SDK supports several Osmo standard decks of physical pieces:
   - Numbers - digits and dice faces, shipped with the Numbers game.
   - Coding - the various tiles shipped with Coding Awbie and Coding Jam (currently the character pieces with Coding Duo are not supported)
   - DominoCodes - printable barcodes, convenient to prototype new games [(printable link)](./dominocodes.pdf).
+
+## Customizing Decks
+
++ Currently, you cannot mix and match tiles from different sets.
+
+If you want to change what tiles are detected (such as if you only care about BLUE letter tiles, or if you are using only certain Domino Codes) you can create a custom deck.
+
+In Unity, in your menu bar select `Assets -> Create -> OsmoDecks`. You will see each type of base Deck that we support.
+
+![customized_decks](Images/CustomizedDecks/create.png)
+
+Select the deck type you want to start with.
+
+## CaseWords
+
+![customized_decks](Images/CustomizedDecks/words.png)
+
+## Coding
+
+![customized_decks](Images/CustomizedDecks/coding.png)
+
+## Numbers
+
+![customized_decks](Images/CustomizedDecks/numbers.png)
+
+## DominoCode
+
+![customized_decks](Images/CustomizedDecks/dominocode.png)
+
 
 
 # Testing In-Editor
@@ -138,7 +177,7 @@ An example of a game which only registers with `OnObjectEnter`. Once a letter ha
 
 An example game using domino codes. It uses a custom deck (which ignores domino code values that are not used by the game). To play this on device, print out a set of domino codes from `dominocodes.pdf` in the `sdk-readme` directory of the SDK.
 
-In order to make your own custom decks, see the [Deck](#deck) section.
+In order to make your own custom decks, see the [Customizing Deck](#customizingdecks) section.
 
 ![example_timeline_game](Images/Examples/timeline_game.png)
 
@@ -168,10 +207,9 @@ An example of a more complete small puzzle game using the Coding tiles.
 ![example_coding_valley](Images/Examples/coding_valley.png)
 
 
-
 # API
 
-# API Key
+## API Key
 
 You should have received a private API Key along with your Osmo SDK download. This uniquely identifies you and should not be shared publicly.
 
@@ -191,7 +229,7 @@ namespace Tangible.SDK.Vision {
 You can set it in the inspector in your `TangibleManager` (see below). Values set in the inspector will take precedence over values set in `ApiKey.cs`.
 
 
-# TangibleManager
+## TangibleManager
 - [TangibleManager.AliveObjects](#aliveobjects)
 - [TangibleManager.OnObjectEnter](#onobjectenter)
 - [TangibleManager.OnObjectExit](#onobjectexit)
@@ -206,7 +244,7 @@ The class implements multiple ways of generating the input, primarily:
 
 ![tangible_manager_inspector](Images/TangibleManager/inspector.png)
 
-## AliveObjects
+### AliveObjects
 ```csharp
 public IEnumerable<TangibleObject> AliveObjects { get; }
 ```
@@ -214,14 +252,14 @@ public IEnumerable<TangibleObject> AliveObjects { get; }
 All `TangibleObject`s that are `Alive`. This is useful if you are starting up some level and want to know if vision already has some recognized pieces.
 
 
-## OnObjectEnter
+### OnObjectEnter
 ```csharp
 public event Action<TangibleObject> OnObjectEnter;
 ```
 
 Invoked whenever a `TangibleObject` becomes `Alive`. This is the case when the piece (whether simulated or not) is recognized from vision.
 
-## OnObjectExit
+### OnObjectExit
 ```csharp
 public event Action<TangibleObject> OnObjectExit;
 ```
@@ -230,7 +268,7 @@ Invoked whenever a `TangibleObject` becomes not `Alive`. This happens when the p
 
 The `TangibleObject` persists because the piece can disappear from vision for a couple frames due to any number of factors including obstruction from hands, etc.
 
-## OnUpdatedTangibleObjects
+### OnUpdatedTangibleObjects
 ```csharp
 public event Action OnUpdatedTangibleObjects;
 ```
@@ -240,7 +278,7 @@ Invoked whenever the `VisionFramework` has processed and returned new data. The 
 It will generally run at approximately 10-20 frames per second, but on older devices it may be even slower (especially if you are doing a lot of CPU processing in Unity).
 
 
-## Mute
+### Mute
 ```csharp
 public void Mute(bool mute);
 ```
@@ -248,7 +286,7 @@ public void Mute(bool mute);
 Muting the `VisionFramework` will disable all computer vision processing until you unmute. This is useful if you want to save CPU resources when you don't need any data from the `VisionFramework` (such as if you're on a home screen or a settings screen).
 
 
-# TangibleObject
+## TangibleObject
 - [TangibleObject.Id](#id)
 - [TangibleObject.UniqueId](#uniqueid)
 - [TangibleObject.Alive](#alive)
@@ -257,14 +295,14 @@ Muting the `VisionFramework` will disable all computer vision processing until y
 
 `TangibleObject` is the C# class that represents a physical piece in the Deck.
 
-## Id
+### Id
 ```csharp
 public int Id;
 ```
 
 `Id` is mapped to a piece in the Deck (this is non-unique since there can be multiples of the same piece - i.e. walking block in Coding)
 
-## UniqueId
+### UniqueId
 ```csharp
 public readonly int UniqueId;
 ```
@@ -273,21 +311,21 @@ Given that there can be multiple of the same pieces per deck, `TangibleObject`s 
 
 This is a best effort calculation. You will never see two objects with the same `UniqueId`, but you may see see two `UniqueId`s where you would have thought there should have been one (generally worse on older iPads with worse cameras where we cannot keep track of tiles as well).
 
-## Alive
+### Alive
 ```csharp
 public bool Alive { get; }
 ```
 
 `Alive` means that this piece is in the play area. This includes persisted pieces that were not in the last vision frame.
 
-## Visible
+### Visible
 ```csharp
 public bool Visible { get; }
 ```
 
 `Visible` means that this piece is in the play area. This **does not** includes persisted pieces that were not in the last vision frame. `Visible` values will flicker on/off as the vision algorithms work with imperfect camera input.
 
-## Location
+### Location
 ```csharp
 public Location Location { get; }
 ```
@@ -304,7 +342,7 @@ public class Location {
 }
 ```
 
-# TangibleDebugOverlay
+## TangibleDebugOverlay
 - [TangibleDebugOverlay.Show](#show)
 - [TangibleDebugOverlay.Hide](#hide)
 
@@ -315,21 +353,21 @@ You can toggle the TangibleDebugOverlay through the editor panel that appears wh
 ![debug_overlay_hidden](Images/TangibleDebugOverlay/hidden.png)
 ![debug_overlay_shown](Images/TangibleDebugOverlay/shown.png)
 
-## Show
+### Show
 ```csharp
 public static void Show();
 ```
 
 `Show` starts up DebugOverlay objects which will render ghost pieces on the screen that correspond to `TangibleObject`s in `TangibleManager`.
 
-## Hide
+### Hide
 ```csharp
 public static void Hide();
 ```
 
 Hides the DebugOverlay objects.
 
-# VisionSetup
+## VisionSetup
 - [VisionSetup.SetState](#setstate)
 - [VisionSetup.GetSetupFlags](#getsetupflags)
 
@@ -345,7 +383,7 @@ To customize the visuals, look at these prefabs (Modify if you are using fullscr
 + `BuiltInSetupUIDropdown` - Prefab used for the non-blocking setup dropdown
 + `BuiltInSetupUIFullScreen` - Prefab used for the blocking full screen setup
 
-## SetState
+### SetState
 ```csharp
 public void SetState(VisionSetupState state);
 ```
@@ -359,7 +397,7 @@ public enum VisionSetupState {
 }
 ```
 
-## GetSetupFlags
+### GetSetupFlags
 ```csharp
 public ReadOnlyCollection<SetupFlag> GetSetupFlags();
 ```
@@ -385,6 +423,7 @@ public enum SetupFlag {       // an integer bit mask with these bit values
 If you are testing in editor, you can control the flags sent on your `VisionSetup` object.
 
 ![vision_setup_unity_flags](Images/VisionSetup/unity_flags.png)
+
 
 # Debugging
 
