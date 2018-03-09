@@ -177,7 +177,7 @@ An example of a game which only registers with `OnObjectEnter`. Once a letter ha
 
 An example game using domino codes. It uses a custom deck (which ignores domino code values that are not used by the game). To play this on device, print out a set of domino codes from `dominocodes.pdf` in the `sdk-readme` directory of the SDK.
 
-In order to make your own custom decks, see the [Customizing Deck](#customizingdecks) section.
+In order to make your own custom decks, see the [Customizing Deck](#customizing-decks) section.
 
 ![example_timeline_game](Images/Examples/timeline_game.png)
 
