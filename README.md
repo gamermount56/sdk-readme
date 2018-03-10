@@ -104,22 +104,51 @@ In Unity, in your menu bar select `Assets -> Create -> OsmoDecks`. You will see 
 
 Select the deck type you want to start with.
 
-## CaseWords
+### Add-Ons
+You may attach any number of `ScriptableObject`s to a deck and have their `Init` and `Destroy` methods called when the Deck is created and destroyed.
 
+### Atlas
+Texture that the editor will load for displaying tiles
+
+
+## CaseWords
 ![customized_decks](Images/CustomizedDecks/words.png)
 
-## Coding
+### Width Subdivision
+Number of columns in the image
 
-![customized_decks](Images/CustomizedDecks/coding.png)
+### Height Subdivision
+Number of rows in the image
 
 ## Numbers
-
 ![customized_decks](Images/CustomizedDecks/numbers.png)
 
-## DominoCode
+### Width Subdivision
+Number of columns in the image
 
+### Height Subdivision
+Number of rows in the image
+
+## Coding
+![customized_decks](Images/CustomizedDecks/coding.png)
+
+### Coding Config Json
+See `strawbies_config` as an example of what this config json looks like.
+
+## DominoCode
 ![customized_decks](Images/CustomizedDecks/dominocode.png)
 
+### Default Image
+The background used to display the Domino Codes in the editor
+
+### Barcode Offset From Center
+The offset from the reported center of the item compared to the center of the Domino Code
+
+### Barcode Orientation Offset
+The offset from the reported orientation compared to the actual orientation of the Domino Code
+
+### Config Json
+See `DominocodeConfig` as an example of what this config json looks like. You can restrict what IDs are recognized by the system to have a smaller set to worry about in the editor.
 
 
 # Testing In-Editor
