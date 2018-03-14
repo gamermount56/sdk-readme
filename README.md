@@ -486,7 +486,7 @@ We need your help!
 + What did work?
 
 # Legal
-The latest [SDK License Agreement](https://docs.google.com/document/d/1YK82HsDxKN9U_w3t507ON6N_rN6XuUH8af9n4wB2z5A)
+The latest [SDK License Agreement](https://docs.google.com/document/d/1YK82HsDxKN9U_w3t507ON6N_rN6XuUH8af9n4wB2z5A).
 
 ## License Summary
 
@@ -498,4 +498,4 @@ The latest [SDK License Agreement](https://docs.google.com/document/d/1YK82HsDxK
 + We provide the Osmo SDK 'As Is'
 -->
 
-For any other questions, contact sdk@playosmo.com or send a message on the TangiblePlay SDK slack channel you should have been invited to
+For any other questions, contact sdk@playosmo.com or send a message on the TangiblePlay SDK slack channel you should have been invited to.
