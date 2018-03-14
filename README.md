@@ -66,6 +66,7 @@
 ![build_ipad](Images/BuildIpad/buildsettings.png)
 
 3. Wait for the build to complete and open up the generated XCode project
+	+ You can also choose `Build & Run` instead of `Build`, but we've found that Unity sometimes has trouble opening up XCode this way on some machines.
 
 ![build_ipad](Images/BuildIpad/xcodeproj.png)
 
@@ -234,6 +235,16 @@ See the [Testing In-Editor](#testing-in-editor) section for how to play in-edito
 An example of a more complete small puzzle game using the Coding tiles.
 
 ![example_coding_valley](Images/Examples/coding_valley.png)
+
+
+## 8. Example Selector
+`Examples/ExampleSelector/ExampleSelectorScene.unity`
+
+Use this scene if you want to select between the above example scenes. We do not currently support swapping decks at runtime (please let us know if you would like this feature), so you will have to close the app to select a new scene.
+
+In order to have this work, you will need to add all of the scenes in your `File -> Build Settings -> Scenes in Build` list.
+
+![example_selector](Images/Examples/selector.png)
 
 
 # API
