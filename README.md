@@ -1,6 +1,7 @@
 # Quick-start Guide
 
 ## What you'll need
++ This guide (view the latest version [online](https://github.com/tangibleplay/sdk-readme))
 + Unity (tested against Unity `5.6.4f1`, and `2071.2f1`)
 + XCode (tested against 8.x and 9.x)
 + An iPad (any iPad [Osmo supports](https://support.playosmo.com/hc/en-us/articles/115009542208-Which-iPad-models-is-Osmo-compatible-with-))
