@@ -471,7 +471,7 @@ If you are testing in editor, you can control the flags sent on your `VisionSetu
 
 Does nothing work on device and you can't figure out what's wrong?
 
-Try filtering on the string `[OsmoSDK]` in the iOS logs and see if there is anything suspicous.
+Try filtering on the string `[OsmoSDK]` in the iOS logs and see if there is anything suspicious.
 
 If you ever see an `[OsmoSDK]` log that says `internal error`, please let us know because that means we messed up something!
 
