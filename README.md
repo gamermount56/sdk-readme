@@ -14,13 +14,17 @@
 
 2. Create a new Unity project (or create a new scene on an existing project you have set up)
 
+3. Install the SDK using either `osmosdk-<date>.unitypackage` or `osmosdk-<date>.zip`
+	+ It's important you put this in your top level `Assets` folder because the `Assets/Plugins/iOS` path will be pushed into the generated XCode project after the Unity build is complete.
+	+ The SDK only needs what is in the `Plugins` folder.
+	+ The `Examples` folder is there if you want to view our SDK Example scenes (see Examples section below). Feel free to delete it if you don't need it.
+	+ The `Readme` folder contains this document you're reading right now. Feel free to delete it if you don't need it.
+
 3. (a) If you are using `osmosdk-<date>.unitypackage`, open it from your file explorer and let it install.
 
 ![quickstart_gitclone](Images/QuickStart/unitypackage.png)
 
 3. (b) If you are using the `osmosdk-<date>.zip`, extract it to a temporary location and then copy both the `Plugins` and `Examples` (optional) to your **top level** `Assets` Unity folder.
-	+ It's important you put this in your top level `Assets` folder because the `Assets/Plugins/iOS` path will be pushed into the generated XCode project after the Unity build is complete.
-	+ The SDK only needs what is in the `Plugins` folder. The `Examples` folder is there if you want to view our SDK Example scenes (see Examples section below).
 
 ![quickstart_unityproj](Images/QuickStart/unityproj.png)
 
