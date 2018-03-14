@@ -205,7 +205,7 @@ An example of a game which only registers with `OnObjectEnter`. Once a letter ha
 ## 5. Timeline Game
 `Examples/TimelineGame/TimelineScene.unity`
 
-An example game using domino codes. It uses a custom deck (which ignores domino code values that are not used by the game). To play this on device, print out a set of domino codes from `dominocodes.pdf` in the `sdk-readme` directory of the SDK.
+An example game using domino codes. It uses a custom deck (which ignores domino code values that are not used by the game). To play this on device, print out a set of domino codes from `dominocodes.pdf` in the `Readme` directory of the SDK.
 
 In order to make your own custom decks, see the [Customizing Deck](#customizing-decks) section.
 
@@ -266,7 +266,9 @@ namespace Tangible.SDK.Vision {
 }
 ```
 
-You can set it in the inspector in your `TangibleManager` (see below). Values set in the inspector will take precedence over values set in `ApiKey.cs`.
+You can set it in the inspector in your `TangibleManager`. Values set in the inspector will take precedence over values set in `ApiKey.cs`.
+
+![tangible_manager_apikey](Images/TangibleManager/apikey.png)
 
 
 ## TangibleManager
