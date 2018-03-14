@@ -473,6 +473,8 @@ Does nothing work on device and you can't figure out what's wrong?
 
 Try filtering on the string `[OsmoSDK]` in the iOS logs and see if there is anything suspicous.
 
+If you ever see an `[OsmoSDK]` log that says `internal error`, please let us know because that means we messed up something!
+
 
 # Future Plans
 We need your help! 
