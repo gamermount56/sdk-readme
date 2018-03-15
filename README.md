@@ -261,6 +261,8 @@ You should have received a private API Key along with your Osmo SDK download. Th
 
 It should look like this: `01234567-89AB-CDEF-0123-456789ABCDEF`
 
+If you don't have an API Key, contact us through [this application](https://docs.google.com/forms/d/1131Box1LDAskOu2tg5C0zak4G8Wp_WhpONpw73VH1aU/viewform?ts=5a0b256f)
+
 You have two options on how to enter this API Key in your Unity project.
 
 You can paste it directly into `Assets/Plugins/ApiKey.cs`
