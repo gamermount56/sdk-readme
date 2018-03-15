@@ -8,6 +8,7 @@
 + Osmo Hardware ([Base+Reflector](https://www.playosmo.com/en/shopping/?overlay=osmo_game_system+osmo_base_ipad) and tiles you want to use from the set: [Words](https://www.playosmo.com/en/words/), [Numbers](https://www.playosmo.com/en/numbers/), [Coding Awbie](https://www.playosmo.com/en/coding/), [Coding Jam](https://www.playosmo.com/en/coding-jam/), [Domino Codes](https://github.com/tangibleplay/sdk-readme/blob/master/dominocodes.pdf))
 + The Osmo SDK (you should have received a download link)
 + An Osmo API Key (it should look like this `01234567-89AB-CDEF-0123-456789ABCDEF`)
+	- If you don't have an API Key, contact us through [this application](https://docs.google.com/forms/d/1131Box1LDAskOu2tg5C0zak4G8Wp_WhpONpw73VH1aU/viewform?ts=5a0b256f) and we'll get back to you.
 
 ## Getting started with a Hello World app
 1. Download the `osmosdk-<date>.unitypackage` or `osmosdk-<date>.zip` file you were linked to.
