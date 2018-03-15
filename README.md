@@ -496,6 +496,8 @@ We need your help!
 # Legal
 The latest [SDK License Agreement](https://docs.google.com/document/d/1YK82HsDxKN9U_w3t507ON6N_rN6XuUH8af9n4wB2z5A).
 
+If you have not read and signed the license agreement, please [go here](https://docs.google.com/forms/d/1131Box1LDAskOu2tg5C0zak4G8Wp_WhpONpw73VH1aU/viewform?ts=5a0b256f) so you can get an API Key.
+
 ## License Summary
 
 + You should really read the full license, it is not that long.
