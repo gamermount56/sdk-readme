@@ -114,6 +114,9 @@ Select the deck type you want to start with.
 ### Add-Ons
 You may attach any number of `ScriptableObject`s to a deck and have their `Init` and `Destroy` methods called when the Deck is created and destroyed.
 
+For more on `ScriptableObject`, see the [Unity documentation](https://docs.unity3d.com/ScriptReference/ScriptableObject.html) and [tutorial](https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/scriptable-objects).
+
+
 ### Atlas
 Texture that the editor will load for displaying tiles
 
