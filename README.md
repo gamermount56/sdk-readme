@@ -2,7 +2,7 @@
 
 ## What you'll need
 + This guide (view the latest version [online](https://github.com/tangibleplay/sdk-readme))
-+ Unity (tested against Unity `5.6.4f1`, and `2071.2f1`)
++ Unity (we recommend `2071.2f1`)
 + XCode (tested against 8.x and 9.x)
 + An iPad (any iPad [Osmo supports](https://support.playosmo.com/hc/en-us/articles/115009542208-Which-iPad-models-is-Osmo-compatible-with-))
 + Osmo Hardware ([Base+Reflector](https://www.playosmo.com/en/shopping/?overlay=osmo_game_system+osmo_base_ipad) and tiles you want to use from the set: [Words](https://www.playosmo.com/en/words/), [Numbers](https://www.playosmo.com/en/numbers/), [Coding Awbie](https://www.playosmo.com/en/coding/), [Coding Jam](https://www.playosmo.com/en/coding-jam/), [Domino Codes](https://github.com/tangibleplay/sdk-readme/blob/master/dominocodes.pdf))
