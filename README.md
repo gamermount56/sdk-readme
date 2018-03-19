@@ -45,8 +45,9 @@
 6. Create a new game object on your scene hierarchy. Name it "DumpTangibleData"
 
 7. Create a new script and call it "DumpTangibleData" also, start editing it
-	+ Add `using System.Linq` to the usings
+	+ Add `using System.Linq;` to the usings
 	+ Add the following to the `Update` function: `Tangible.SDK.TangibleManager.Instance.AliveObjects.ToList().ForEach(x => Debug.Log(x.ToString()));`
+		- This is just a one-line example. This is probably not how you want to actually access the list of AliveObjects in your game
 
 9. Press Play!
 
@@ -166,6 +167,10 @@ See `DominocodeConfig` as an example of what this config json looks like. You ca
 To play with the pieces in the editor, `TangibleManager` uses the `OnScreenController` to simulate pieces. These pieces are rendered on a separate layer named `TangibleLayer` which is automatically added to the layers of the project.
 
 The simulated pieces are stored in virtual drawers. You can open / close drawers by pressing `X` (this is configurable on the `TangibleManager`). You can grab pieces and place them back inside drawers.
+
+The `Reset Tiles` button will remove tiles from the play area and place them all back in the drawers.
+
+The `Debug Overlay` toggle will enable the [`TangibleDebugOverlay`](#TangibleDebugOverlay).
 
 To rotate pieces, press and hold your mouse button over a tile and hold `A` or `D` to rotate.
 
@@ -505,9 +510,9 @@ If you have not read and signed the license agreement, please [go here](https://
 ## License Summary
 
 + Read the full license, it is not that long. This summary is not a replacement for reading the full license.
-+ Do not share *Confidential Information* information on the Osmo SDK publicly or to other parties that have not signed the SDK License
-+ This license does *NOT* allow you to publish a commercial or free application. If you wish to do this, please contact us.
-+ We provide the Osmo SDK 'As Is'
-+ Assets (such as images, sounds, animations, etc) are NOT licensed for any redistribution
++ Do not share *Confidential Information* on the Osmo SDK publicly or to other parties that have not signed the SDK License.
++ This license does *NOT* allow you to publish a commercial or free application using the Osmo SDK. If you wish to do this, please contact us.
++ Assets (such as images, sounds, animations, etc) are NOT licensed for any redistribution.
++ We provide the Osmo SDK 'As Is' with no guarantees.
 
 For any other questions, contact sdk@playosmo.com or send a message on the TangiblePlay SDK slack channel you should have been invited to.
