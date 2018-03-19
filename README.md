@@ -504,11 +504,9 @@ If you have not read and signed the license agreement, please [go here](https://
 ## License Summary
 
 + You should really read the full license, it is not that long.
-
-<!---
 + Do not share *Confidential Information* information on the Osmo SDK publicly or to other parties that have not signed the SDK License
 + This license does *NOT* allow you to publish a commercial or free application. If you wish to do this, please contact us.
 + We provide the Osmo SDK 'As Is'
--->
++ Assets (such as images, sounds, animations, etc) are NOT licensed for any redistribution
 
 For any other questions, contact sdk@playosmo.com or send a message on the TangiblePlay SDK slack channel you should have been invited to.
