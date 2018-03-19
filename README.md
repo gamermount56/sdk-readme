@@ -2,9 +2,10 @@
 
 ## What you'll need
 + This guide (view the latest version [online](https://github.com/tangibleplay/sdk-readme))
-+ Unity (we recommend `2071.2f1`)
-+ XCode (tested against 8.x and 9.x)
-+ An iPad (any iPad [Osmo supports](https://support.playosmo.com/hc/en-us/articles/115009542208-Which-iPad-models-is-Osmo-compatible-with-))
++ Unity (tested against `2071.2f1`)
++ XCode (tested against 9.2)
++ MacOS (tested against Sierra 10.12)
++ An iPad (any iPad [Osmo supports](https://support.playosmo.com/hc/en-us/articles/115009542208-Which-iPad-models-is-Osmo-compatible-with-) - with iOS 8+)
 + Osmo Hardware ([Base+Reflector](https://www.playosmo.com/en/shopping/?overlay=osmo_game_system+osmo_base_ipad) and tiles you want to use from the set: [Words](https://www.playosmo.com/en/words/), [Numbers](https://www.playosmo.com/en/numbers/), [Coding Awbie](https://www.playosmo.com/en/coding/), [Coding Jam](https://www.playosmo.com/en/coding-jam/), [Domino Codes](https://github.com/tangibleplay/sdk-readme/blob/master/dominocodes.pdf))
 + The Osmo SDK (you should have received a download link)
 + An Osmo API Key (it should look like this `01234567-89AB-CDEF-0123-456789ABCDEF`)
@@ -503,7 +504,7 @@ If you have not read and signed the license agreement, please [go here](https://
 
 ## License Summary
 
-+ You should really read the full license, it is not that long.
++ Read the full license, it is not that long. This summary is not a replacement for reading the full license.
 + Do not share *Confidential Information* information on the Osmo SDK publicly or to other parties that have not signed the SDK License
 + This license does *NOT* allow you to publish a commercial or free application. If you wish to do this, please contact us.
 + We provide the Osmo SDK 'As Is'
