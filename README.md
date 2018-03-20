@@ -1,6 +1,6 @@
 # Osmo SDK Beta
 
-![osmo_bases](Images/Intro/logo.jpg)
+![osmo_logo](Images/Intro/logo.png)
 
 ## What is Osmo?
 
@@ -8,7 +8,7 @@ Osmo is an award winning game system that changes the way kids play games on the
 
 Visit www.playosmo.com to see for yourself. We have plenty of videos and more detailed explanations of all of our games.
 
-![osmo_bases](Images/Intro/scanhand.jpg)
+![osmo_scan_hand](Images/Intro/scanhand.jpg)
 
 ## How does it work?
 
@@ -16,7 +16,7 @@ Magic! Also, a lot of awesome computer vision (=
 
 The Osmo base holds your iPad up vertically. The red plastic thing you put on top of the iPad has a mirror in it. That mirror points the front facing camera down towards the table so that we can *see* what the player is doing in front of the iPad (if that be drawing, throwing tiles down, or putting together coding blocks in order).
 
-![osmo_bases](Images/Intro/reflector.jpg)
+![osmo_reflector](Images/Intro/reflector.jpg)
 
 ## What is the Osmo SDK Beta?
 
