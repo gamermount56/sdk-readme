@@ -28,7 +28,7 @@ If you want to release your game to the public, let us know and we can work out 
 
 We are excited to see what you make!
 
-![osmo_bases](Images/Intro/bases.jpg)
+![osmo_bases](Images/Intro/bases.png)
 
 ## How can I get it?
 
