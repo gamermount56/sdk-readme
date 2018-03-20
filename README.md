@@ -1,6 +1,6 @@
-# Osmo SDK Beta
-
 ![osmo_logo](Images/Intro/logo.png)
+
+# Osmo SDK Beta
 
 ## What is Osmo?
 
