@@ -12,7 +12,7 @@ Visit www.playosmo.com to see for yourself. We have plenty of videos and more de
 
 Magic! Also, a lot of awesome computer vision (=
 
-The Osmo base holds your iPad up vertically. The red plastic thing you put on top of the iPad has a mirror in it. That mirror points the front facing camera down towards the table so that we can *see* what the player is doing in front of the iPad (if that be drawing, throwing tiles down, or putting together coding blocks in order).
+The Osmo base holds your iPad up vertically. The red plastic thing you put on top of the iPad has a mirror in it. That mirror points the front facing camera down towards the table so that we can *see* what the player is doing in front of the iPad (drawing, throwing tiles down, or putting together coding blocks in order).
 
 ![osmo_reflector](Images/Intro/reflector.jpg)
 
@@ -27,6 +27,16 @@ If you want to release your game to the public, let us know and we will work wit
 We are excited to see what you make!
 
 ![osmo_bases](Images/Intro/bases.png)
+
+## Who was Osmo designed for?
+
+Osmo apps range for ages 5–12, but people of all ages enjoy it.
+
+We love to make games for kids, but we're completely open to other types of games and tools that you'd like to make with the Osmo SDK!
+
+## What tiles does the SDK support?
+
+Currently, the SDK supported the following tilesets: Words, Numbers, Coding, Domino Codes (printable codes similar to QR codes).
 
 ## How can I get it?
 
@@ -136,6 +146,8 @@ The SDK supports several Osmo standard decks of physical pieces:
   - Numbers - digits and dice faces, shipped with the Numbers game.
   - Coding - the various tiles shipped with Coding Awbie and Coding Jam (currently the character pieces with Coding Duo are not supported)
   - DominoCodes - printable barcodes, convenient to prototype new games [(printable link)](./dominocodes.pdf).
+
+  Note: We only support using a single deck at a time (so the SDK will not be able to detect both Words and Numbers tiles at the same time).
 
 ## Customizing Decks
 
