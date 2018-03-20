@@ -1,7 +1,5 @@
 ![osmo_logo](Images/Intro/logo.png)
 
-# Osmo SDK Beta
-
 ## What is Osmo?
 
 Osmo is an award winning game system that changes the way kids play games on the iPad.  We’re currently in open beta with our SDK and are looking for game developers like you who share our love of making games for kids! If you’re interested, please send an email at sdk@tangibleplay.com for more information.
@@ -24,7 +22,7 @@ Our SDK lets you use our kid proven and teacher tested tangible game pieces to m
 
 You can prototype, you can build a new game with our tiles, you can build something awesome we've never even dreamed of. 
 
-If you want to release your game to the public, let us know and we can work out a licensicing agreement that works for both you and us.
+If you want to release your game to the public, let us know and we will work with you to make a licensing agreement that works for both of us.
 
 We are excited to see what you make!
 
@@ -32,8 +30,9 @@ We are excited to see what you make!
 
 ## How can I get it?
 
-Fill out the short [application form](https://docs.google.com/forms/d/1131Box1LDAskOu2tg5C0zak4G8Wp_WhpONpw73VH1aU/viewform?ts=5a0b256f). We'll get back to you as quickly as we can.
+Fill out this short [application form](https://docs.google.com/forms/d/1131Box1LDAskOu2tg5C0zak4G8Wp_WhpONpw73VH1aU/viewform?ts=5a0b256f). We'll get back to you as quickly as we can.
 
+<br><br>
 
 # Quick-start Guide
 
@@ -199,6 +198,7 @@ The offset from the reported orientation compared to the actual orientation of t
 ### Config Json
 See `DominocodeConfig` as an example of what this config json looks like. You can restrict what IDs are recognized by the system to have a smaller set to worry about in the editor.
 
+<br><br>
 
 # Testing In-Editor
 To play with the pieces in the editor, `TangibleManager` uses the `OnScreenController` to simulate pieces. These pieces are rendered on a separate layer named `TangibleLayer` which is automatically added to the layers of the project.
@@ -215,6 +215,7 @@ For coding pieces, pressing `W` `A` `S` `D` will set the direction arrow on piec
 
 ![testing_editor_controls](Images/TestingInEditor/onscreencontroller.jpg)
 
+<br><br>
 
 # Examples
 
@@ -298,6 +299,7 @@ In order to have this work, you will need to add all of the scenes in your `File
 
 ![example_selector](Images/Examples/selector.png)
 
+<br><br>
 
 # API
 
@@ -520,6 +522,7 @@ If you are testing in editor, you can control the flags sent on your `VisionSetu
 
 ![vision_setup_unity_flags](Images/VisionSetup/unity_flags.png)
 
+<br><br>
 
 # Debugging
 
@@ -529,15 +532,7 @@ Try filtering on the string `[OsmoSDK]` in the iOS logs and see if there is anyt
 
 If you ever see an `[OsmoSDK]` log that says `internal error`, please let us know because that means we messed up something!
 
-
-# Future Plans
-We need your help! 
-
-+ What would you like to see change, added, removed from the SDK?
-+ What expectations did we not meet?
-+ What was confusing?
-+ What didn't work?
-+ What did work?
+<br><br>
 
 # Legal
 The latest [SDK License Agreement](https://docs.google.com/document/d/1YK82HsDxKN9U_w3t507ON6N_rN6XuUH8af9n4wB2z5A).
@@ -554,3 +549,16 @@ If you have not read and signed the license agreement, please [go here](https://
 + We provide the Osmo SDK '*As Is*' with no guarantees.
 
 For any other questions, contact sdk@playosmo.com or send a message on the TangiblePlay SDK slack channel you should have been invited to.
+
+<br><br>
+
+# Future Plans
+We need your help! 
+
++ What would you like to see change, added, removed from the SDK?
++ What expectations did we not meet?
++ What was confusing?
++ What didn't work?
++ What did work?
+
+Get in touch with us (through the slack channel or sdk@playosmo.com).
