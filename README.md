@@ -1,13 +1,50 @@
+# Osmo SDK Beta
+
+![osmo_bases](Images/Intro/logo.jpg)
+
+## What is Osmo?
+
+Osmo is an award winning game system that changes the way kids play games on the iPad.  We’re currently in open beta with our SDK and are looking for game developers like you who share our love of making games for kids! If you’re interested, please send an email at sdk@tangibleplay.com for more information.
+
+Visit www.playosmo.com to see for yourself. We have plenty of videos and more detailed explanations of all of our games.
+
+![osmo_bases](Images/Intro/scanhand.jpg)
+
+## How does it work?
+
+Magic! Also, a lot of awesome computer vision (=
+
+The Osmo base holds your iPad up vertically. The red plastic thing you put on top of the iPad has a mirror in it. That mirror points the front facing camera down towards the table so that we can *see* what the player is doing in front of the iPad (if that be drawing, throwing tiles down, or putting together coding blocks in order).
+
+![osmo_bases](Images/Intro/reflector.jpg)
+
+## What is the Osmo SDK Beta?
+
+Our SDK lets you use our kid proven and teacher tested tangible game pieces to make your own games or applicaitons. It's our way of letting developers work with our hardware and computer vision software in order to make their own games.
+
+You can prototype, you can build a new game with our tiles, you can build something awesome we've never even dreamed of. 
+
+If you want to release your game to the public, let us know and we can work out a licensicing agreement that works for both you and us.
+
+We are excited to see what you make!
+
+![osmo_bases](Images/Intro/bases.jpg)
+
+## How can I get it?
+
+Fill out the short [application form](https://docs.google.com/forms/d/1131Box1LDAskOu2tg5C0zak4G8Wp_WhpONpw73VH1aU/viewform?ts=5a0b256f). We'll get back to you as quickly as we can.
+
+
 # Quick-start Guide
 
 ## What you'll need
-+ This guide (view the latest version [online](https://github.com/tangibleplay/sdk-readme))
++ This guide (view the latest version [online](https://sdk.playosmo.com))
 + Unity (tested against `2071.2f1`)
 + XCode (tested against 9.2)
-+ MacOS (tested against Sierra 10.12)
++ MacOS (tested against Sierra)
 + An iPad (any iPad [Osmo supports](https://support.playosmo.com/hc/en-us/articles/115009542208-Which-iPad-models-is-Osmo-compatible-with-) - with iOS 8+)
 + Osmo Hardware ([Base+Reflector](https://www.playosmo.com/en/shopping/?overlay=osmo_game_system+osmo_base_ipad) and tiles you want to use from the set: [Words](https://www.playosmo.com/en/words/), [Numbers](https://www.playosmo.com/en/numbers/), [Coding Awbie](https://www.playosmo.com/en/coding/), [Coding Jam](https://www.playosmo.com/en/coding-jam/), [Domino Codes](https://github.com/tangibleplay/sdk-readme/blob/master/dominocodes.pdf))
-+ The Osmo SDK (you should have received a download link)
++ The Osmo SDK binaries (you should have received a download link to a `unitypackage` or `zip`)
 + An Osmo API Key (it should look like this `01234567-89AB-CDEF-0123-456789ABCDEF`)
 	- If you don't have an API Key, contact us through [this application](https://docs.google.com/forms/d/1131Box1LDAskOu2tg5C0zak4G8Wp_WhpONpw73VH1aU/viewform?ts=5a0b256f)
 
@@ -509,10 +546,11 @@ If you have not read and signed the license agreement, please [go here](https://
 
 ## License Summary
 
-+ Read the full license, it is not that long. This summary is not a replacement for reading the full license.
++ Read the full license, it is not that long.
+	- This summary is not a replacement for reading the full license.
 + Do not share *Confidential Information* on the Osmo SDK publicly or to other parties that have not signed the SDK License.
 + This license does *NOT* allow you to publish a commercial or free application using the Osmo SDK. If you wish to do this, please contact us.
 + Assets (such as images, sounds, animations, etc) are NOT licensed for any redistribution.
-+ We provide the Osmo SDK 'As Is' with no guarantees.
++ We provide the Osmo SDK '*As Is*' with no guarantees.
 
 For any other questions, contact sdk@playosmo.com or send a message on the TangiblePlay SDK slack channel you should have been invited to.
