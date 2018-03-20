@@ -176,7 +176,7 @@ To rotate pieces, press and hold your mouse button over a tile and hold `A` or `
 
 For coding pieces, pressing `W` `A` `S` `D` will set the direction arrow on pieces. Pressing `1` `2` `3` `4` `5` will set the quantifier attached. Press `SPACE` to send a 'play' button press.
 
-![testing_editor_controls](Images/TestingInEditor/onscreencontroller.png)
+![testing_editor_controls](Images/TestingInEditor/onscreencontroller.jpg)
 
 
 # Examples
@@ -409,8 +409,8 @@ To debug what the vision is seeing on device, we have provided a class called `T
 
 You can toggle the TangibleDebugOverlay through the editor panel that appears when you press 'S'. Use the "Debug Overlay" checkmark at the bottom. You'll see the raw id values overlayed on top of the tiles you are manipulating.
 
-![debug_overlay_hidden](Images/TangibleDebugOverlay/hidden.png)
-![debug_overlay_shown](Images/TangibleDebugOverlay/shown.png)
+![debug_overlay_hidden](Images/TangibleDebugOverlay/hidden.jpg)
+![debug_overlay_shown](Images/TangibleDebugOverlay/shown.jpg)
 
 ### Show
 ```csharp
