@@ -42,6 +42,16 @@ Currently, the SDK supported the following tilesets: Words, Numbers, Coding, Dom
 
 Fill out this short [application form](https://docs.google.com/forms/d/1131Box1LDAskOu2tg5C0zak4G8Wp_WhpONpw73VH1aU/viewform?ts=5a0b256f). We'll get back to you as quickly as we can.
 
+## I have the SDK now, what do I do?
+
++ Make sure you understand the [License Agreement](#Legal)
++ Read the [Quick-Start Guide](#Quick-StartGuide)
++ Learn about [Testing In-Editor](#TestingIn-Editor)
++ Go over our [Example Projects](#Examples)
++ Review the full [API Docs](#API)
++ If you're having troubles checkout the [Debugging](#Debugging) section
++ Make your game! Give us some [feedback](#Future-Plans)
+
 <br><br>
 
 # Quick-start Guide
@@ -57,7 +67,7 @@ Fill out this short [application form](https://docs.google.com/forms/d/1131Box1L
 + An Osmo API Key (it should look like this `01234567-89AB-CDEF-0123-456789ABCDEF`)
 	- If you don't have an API Key, contact us through [this application](https://docs.google.com/forms/d/1131Box1LDAskOu2tg5C0zak4G8Wp_WhpONpw73VH1aU/viewform?ts=5a0b256f)
 
-## Getting started with a Hello World app
+## Getting started with a 'Hello World' app
 1. Download the `osmosdk-<date>.unitypackage` or `osmosdk-<date>.zip` file you were linked to.
 
 2. Create a new Unity project (or create a new scene on an existing project you have set up)
@@ -560,7 +570,7 @@ If you have not read and signed the license agreement, please [go here](https://
 + Assets (such as images, sounds, animations, etc) are NOT licensed for any redistribution.
 + We provide the Osmo SDK '*As Is*' with no guarantees.
 
-For any other questions, contact sdk@playosmo.com or send a message on the TangiblePlay SDK slack channel you should have been invited to.
+For any other questions, contact sdk@playosmo.com or better yet send a message on the Osmo SDK slack channel you should have been invited to.
 
 <br><br>
 
