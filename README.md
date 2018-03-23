@@ -63,12 +63,15 @@ Fill out this short [application form](https://docs.google.com/forms/d/1131Box1L
 + MacOS (tested against Sierra)
 + An iPad (any iPad [Osmo supports](https://support.playosmo.com/hc/en-us/articles/115009542208-Which-iPad-models-is-Osmo-compatible-with-) - with iOS 8+)
 + Osmo Hardware ([Base+Reflector](https://www.playosmo.com/en/shopping/?overlay=osmo_game_system+osmo_base_ipad) and tiles you want to use from the set: [Words](https://www.playosmo.com/en/words/), [Numbers](https://www.playosmo.com/en/numbers/), [Coding Awbie](https://www.playosmo.com/en/coding/), [Coding Jam](https://www.playosmo.com/en/coding-jam/), [Domino Codes](https://github.com/tangibleplay/sdk-readme/blob/master/dominocodes.pdf))
-+ The Osmo SDK binaries (you should have received a download link to a `unitypackage` or `zip`)
++ The Osmo SDK binaries (you should have received a download link to a `unitypackage` + `zip`)
 + An Osmo API Key (it should look like this `01234567-89AB-CDEF-0123-456789ABCDEF`)
 	- If you don't have an API Key, contact us through [this application](https://docs.google.com/forms/d/1131Box1LDAskOu2tg5C0zak4G8Wp_WhpONpw73VH1aU/viewform?ts=5a0b256f)
 
 ## Getting started with a 'Hello World' app
 1. Download the `osmosdk-<date>.unitypackage` or `osmosdk-<date>.zip` file you were linked to.
+	- They both have the exact same SDK and Examples in them, use whichever you're more comfortable with.
+	- You will also see a `readme-<date>.zip` if you want a local copy of this README (which will be customized to have your unique API key in it so don't distribute it outside your group).
+	- If you want the latest README locally, you can either `git checkout https://github.com/tangibleplay/sdk-readme.git` or download it from the [github page](https://github.com/tangibleplay/sdk-readme/archive/master.zip).
 
 2. Create a new Unity project (or create a new scene on an existing project you have set up)
 
