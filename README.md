@@ -12,7 +12,7 @@ Visit www.playosmo.com to see for yourself. We have plenty of videos and more de
 
 Magic! Also, a lot of awesome computer vision (=
 
-The Osmo base holds your iPad up vertically. The red plastic thing you put on top of the iPad has a mirror in it. That mirror points the front facing camera down towards the table so that we can *see* what the player is doing in front of the iPad (drawing, throwing tiles down, or putting together coding blocks in order).
+The Osmo base holds your iPad up vertically. The red plastic thing (we call it the red reflector) you put on top of the iPad has a mirror in it. That mirror reflects the front facing camera down towards the table so that we can *see* what the player is doing in front of the iPad (drawing, throwing tiles down, or putting together coding blocks in order).
 
 ![osmo_reflector](Images/Intro/reflector.jpg)
 
