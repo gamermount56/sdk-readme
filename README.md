@@ -126,32 +126,38 @@ Fill out this short [application form](https://docs.google.com/forms/d/1131Box1L
 13. Congratulations! You've made your first Osmo App (=
 
 
-## Getting your app on an iPad
+## Getting your app on an iPad/iPhone
 
 1. Change your Unity build target to iOS: `File -> Build Settings -> iOS`
 
 2. Create the XCode project: `File -> Build Settings -> Build` (we generally put them in a `builds` folder inside the unity project which you can then `.gitignore`)
 
-![build_ipad](Images/BuildIpad/buildsettings.png)
+![build_ipad_settings](Images/BuildIpad/buildsettings.png)
+
+3. Click on `Player Settings` and edit the following:
+	+ Camera Usage Description: You need to enter the text iOS will prompt as it requests camera access
+	+ Target minimum iOS Version: Osmo only supports iOS 8.0+ so for safety change this from 7.0 to 8.0
+
+![build_ipad_config](Images/BuildIpad/config.png)
 
 3. Wait for the build to complete and open up the generated XCode project
 	+ You can also choose `Build & Run` instead of `Build`, but we've found that Unity sometimes has trouble opening up XCode this way on some machines.
 
 ![build_ipad](Images/BuildIpad/xcodeproj.png)
 
-4. Attach an iPad to your computer via USB
+4. Attach a supported iPad/iPhone to your computer via USB
 
-5. Switch "Generic iOS Device" to your iPad
+5. Switch "Generic iOS Device" to your iPad/iPhone
 
-![build_ipad](Images/BuildIpad/xcodedevice.png)
+![build_ipad_xcode](Images/BuildIpad/xcodedevice.png)
 
-6. Hit play to build and install the app to your iPad
+6. Hit play to build and install the app to your iPad/iPhone
 
 7. While in the app, use your Osmo Base/Mirror (you should be able to leave the lightning cable attached while it's in the base) to detect actual tiles.
 
 You can also tap with 3 fingers to bring up the onscreen controller.
 
-![build_ipad](Images/BuildIpad/physical.jpg)
+![build_ipad_physical](Images/BuildIpad/physical.jpg)
 
 
 # Available Decks
