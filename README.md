@@ -464,6 +464,8 @@ public Location Location { get; }
 
 `Location` contains all the data of the piece's current position and orientation.
 
+Note: The Orientation value for the basic tiles (words and numbers) are not particularly stable. If you need orientation you will want to use Coding or domino codes which will give you much cleaner values.
+
 ```csharp
 public class Location {
   public float X { get; }
