@@ -568,6 +568,11 @@ Try filtering on the string `[OsmoSDK]` in the iOS logs and see if there is anyt
 
 If you ever see an `[OsmoSDK]` log that says `internal error`, please let us know because that means we messed up something!
 
+## Known Bugs
+
++ Physical Coding pieces will not be detected (04/05 - will fix in a few days)
++ Coding Valley game renders tiles incorrectly when using on screen pieces
+
 <br><br>
 
 # Legal
