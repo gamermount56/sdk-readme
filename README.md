@@ -570,8 +570,9 @@ If you ever see an `[OsmoSDK]` log that says `internal error`, please let us kno
 
 ## Known Bugs
 
-+ Physical Coding pieces will not be detected (04/05 - will fix in a few days)
-+ Coding Valley game renders tiles incorrectly when using on screen pieces
++ Physical Coding pieces will not be detected (on builds 2018-04-06 and before)
+	- To fix, just change Active->Inactive VisionSetup inspector on the TangibleManager. Fixed in 2018-04-07 builds
++ Coding Valley game renders tiles incorrectly when using on screen pieces (on all current builds)
 
 <br><br>
 
