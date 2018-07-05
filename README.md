@@ -324,7 +324,15 @@ An example of a more complete small puzzle game using the Coding tiles.
 ![example_coding_valley](Images/Examples/coding_valley.png)
 
 
-## 8. Example Selector
+## 8. Perspective Transform
+`Examples/PerspectiveTransformExample/PerspectiveTransformExampleScene.unity`
+
+Shows how to use the perspective transform only mode. This converts the input camera image into a unwarped top-down simulated view.
+
+This can be useful if you are planning on running your own custom Computer Vision algorithms. If you intend to use this mode, please contact us as the example given is only intended for very basic prototyping.
+
+
+## 9. Example Selector
 `Examples/ExampleSelector/ExampleSelectorScene.unity`
 
 Use this scene if you want to select between the above example scenes. We do not currently support swapping decks at runtime (please let us know if you would like this feature), so you will have to close the app to select a new scene.
