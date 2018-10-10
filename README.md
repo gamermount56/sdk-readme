@@ -8,6 +8,10 @@ Visit www.playosmo.com to see for yourself. We have plenty of videos and more de
 
 ![osmo_scan_hand](Images/Intro/scanhand.jpg)
 
+## How can I get it?
+
+Fill out this short [application form](https://docs.google.com/forms/d/1131Box1LDAskOu2tg5C0zak4G8Wp_WhpONpw73VH1aU/viewform?ts=5a0b256f). We'll get back to you as quickly as we can.
+
 ## How does it work?
 
 Magic! Also, a lot of awesome computer vision (=
@@ -39,10 +43,6 @@ We love to make games for kids, but we're completely open to other types of game
 Currently, the SDK supported the following tilesets: Words, Numbers, Coding, Domino Codes (printable codes similar to QR codes).
 
 We use domino codes internally for prototyping when we want to detect some hardware that we haven't developed the computer vision for yet. Just print out the codes and stick them on top of whatever the new hardware pieces are. Play around with different scales of printing the codes depending on how near/far/high your pieces are going to be.
-
-## How can I get it?
-
-Fill out this short [application form](https://docs.google.com/forms/d/1131Box1LDAskOu2tg5C0zak4G8Wp_WhpONpw73VH1aU/viewform?ts=5a0b256f). We'll get back to you as quickly as we can.
 
 ## I have the SDK now, what do I do?
 
