@@ -60,10 +60,11 @@ We use domino codes internally for prototyping when we want to detect some hardw
 
 ## What you'll need
 + This guide (view the latest version [online](https://sdk.playosmo.com))
-+ Unity (tested against `2071.2f1`)
-+ XCode (tested against 9.2)
-+ MacOS (tested against Sierra)
++ Unity (tested against `2017.4.X`)
++ XCode (tested against `9.X`, `10.X`)
++ MacOS (tested against Sierra, High Sierra, Mojave)
 + An iPad (any iPad [Osmo supports](https://support.playosmo.com/hc/en-us/articles/115009542208-Which-iPad-models-is-Osmo-compatible-with-) - with iOS 8+)
+ - Amazon Fire SDK support is being looked into, email us if you are interested
 + Osmo Hardware ([Base+Reflector](https://www.playosmo.com/en/shopping/?overlay=osmo_game_system+osmo_base_ipad) and tiles you want to use from the set: [Words](https://www.playosmo.com/en/words/), [Numbers](https://www.playosmo.com/en/numbers/), [Coding Awbie](https://www.playosmo.com/en/coding/), [Coding Jam](https://www.playosmo.com/en/coding-jam/), [Domino Codes](https://github.com/tangibleplay/sdk-readme/blob/master/dominocodes.pdf))
 + The Osmo SDK binaries (you should have received a download link to a `unitypackage` + `zip`)
 + An Osmo API Key (it should look like this `01234567-89AB-CDEF-0123-456789ABCDEF`)
@@ -578,8 +579,6 @@ If you ever see an `[OsmoSDK]` log that says `internal error`, please let us kno
 
 ## Known Bugs
 
-+ Physical Coding pieces will not be detected (on builds 2018-04-06 and before)
-	- To fix, just change Active->Inactive VisionSetup inspector on the TangibleManager. Fixed in 2018-04-07 builds
 + Coding Valley game renders tiles incorrectly when using on screen pieces (on all current builds)
 
 <br><br>
