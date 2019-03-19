@@ -7,8 +7,8 @@ The SDK supports several Osmo standard decks of physical pieces:
   - DominoCodes - printable barcodes, convenient to prototype new games [(printable link)](./dominocodes.pdf).
 
 The SDK also lets you use the images directly in two different ways.
-  - Perspective Transform - The camera image is un-warped (from the angle of the mirror) and you get a rectified image which you can perform your own computer vision on.
-  - Cutout - Our computer vision code will search for a drawn image on a white background and remove the background. You recieve a color corrected image and a mesh to determine the drawn shape.
+  - Perspective Transform - The camera image is un-warped (from the angle of the mirror) and you get a rectified image which you can perform your own computer vision on. NOTE: Please contact us if you plan on using this. This is an experimental SDK feature that may be removed at any time.
+  - Cutout - Our computer vision code will search for a drawn image on a white background and remove the background. You recieve a color corrected image and a mesh to determine the drawn shape. NOTE: Please contact us if you plan on using this. This is an experimental SDK feature that may be removed at any time.
 
   Note: We only support using a single deck at a time (so the SDK will not be able to detect both Words and Numbers tiles at the same time).
 
