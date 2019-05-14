@@ -82,7 +82,7 @@
 ![build_ipad_config](Images/BuildIpad/config.png)
 
 
-3. Create the XCode project: `File -> Build Settings -> Build` (we generally put them in a `builds` folder inside the unity project which you can then `.gitignore`)
+3. Create the XCode project: `File -> Build Settings -> Build` (place your build folder at the same level as your Assets folder. You can `.gitignore` it so it's not checked into your source control).
 
 4. Wait for the build to complete and open up the generated XCode project
 	+ You can also choose `Build & Run` instead of `Build`, but we've found that Unity sometimes has trouble opening up XCode this way on some machines.
