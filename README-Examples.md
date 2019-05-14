@@ -12,31 +12,21 @@ In our `Update()` call of `Tangible.SDKExamples.BasicExample.Game` you will see 
 ![basic_example](Images/Examples/basic.png)
 
 
-## 2. Basic Setup Example
-`Examples/BasicNumbers/BasicNumbersScene.unity`
-
-An example of how to use the setup configuration values in order to instruct the user on how to properly set up the Osmo hardware.
-
-If you are testing this in the editor, look at the `VisionSetup` object in the scene. You can modify which flags are sent (see the [`VisionSetup`](#visionsetup) section for more).
-
-![example_basic_setup](Images/Examples/setup.png)
-
-
-## 3. Basic Numbers
+## 2. Basic Numbers
 `Examples/BasicSetupExample/BasicSetupScene.unity`
 
 In this example, we subscribe to the events `OnObjectEnter` and `OnObjectExit` from the `TangibleManager`. In the case of subtraction, we also register for the event `OnLocationChanged` because we need to order by X position when tiles move (even if no new tiles enter or exit the play area)
 
 ![example_basic_numbers](Images/Examples/numbers.png)
 
-## 4. Basic Words
+## 3. Basic Words
 `Examples/BasicWords/BasicWordsScene.unity`
 
 An example of a game which only registers with `OnObjectEnter`. Once a letter has been detected, the game treats it as guessed. `OnObjectExit` is ignored because letters cannot be unguessed.
 
 ![example_basic_words](Images/Examples/words.png)
 
-## 5. Timeline Game
+## 4. Timeline Game
 `Examples/TimelineGame/TimelineScene.unity`
 
 An example game using domino codes. It uses a custom deck (which ignores domino code values that are not used by the game). To play this on device, print out a set of domino codes from `dominocodes.pdf` in the `Readme` directory of the SDK.
@@ -45,7 +35,7 @@ In order to make your own custom decks, see the [Customizing Deck](#customizing-
 
 ![example_timeline_game](Images/Examples/timeline_game.png)
 
-## 6. Coding Painting
+## 5. Coding Painting
 `Examples/CodingPainting/CodingPaintingScene.unity`
 
 See the [Testing In-Editor](#testing-in-editor) section for how to play in-editor with Coding tiles.
@@ -61,7 +51,7 @@ See `CodingClusterService` for how the game decides what is in a cluster and wha
 ![example_coding_painting](Images/Examples/coding_painting.png)
 
 
-## 7. Coding Valley
+## 6. Coding Valley
 `Examples/CodingValley/CodingValleyScene.unity`
 
 See the [Testing In-Editor](#testing-in-editor) section for how to play in-editor with Coding tiles.
@@ -71,18 +61,12 @@ An example of a more complete small puzzle game using the Coding tiles.
 ![example_coding_valley](Images/Examples/coding_valley.png)
 
 
-## 8. Perspective Transform
-`Examples/PerspectiveTransformExample/PerspectiveTransformExampleScene.unity`
-
-Shows how to use the perspective transform only mode. This converts the input camera image into a unwarped top-down simulated view.
-
-This can be useful if you are planning on running your own custom Computer Vision algorithms. If you intend to use this mode, please contact us as the example given is only intended for very basic prototyping.
-
-
-## 9. Example Selector
+## 7. Example Selector
 `Examples/ExampleSelector/ExampleSelectorScene.unity`
 
-Use this scene if you want to select between the above example scenes. We do not currently support swapping decks at runtime (please let us know if you would like this feature), so you will have to close the app to select a new scene.
+Use this scene if you want to select between the above example scenes.
+
+NOTE: If you want to switch between different decks at runtime, let us know. We can give you examples of how to do this properly. This Example Selector is a dumb picker and will only load scenes so it does not swap back/forth between different decks at runtime. Close the app to select a new scene.
 
 In order to have this work, you will need to add all of the scenes in your `File -> Build Settings -> Scenes in Build` list.
 
