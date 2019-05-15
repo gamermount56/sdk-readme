@@ -164,22 +164,6 @@ public static void Hide();
 
 Hides the DebugOverlay objects.
 
-## VisionSetup
-- [VisionSetup.SetState](#setstate)
-- [VisionSetup.GetSetupFlags](#getsetupflags)
-
-Using computer vision, we can detect if the device is setup properly and prompt for certain actions if needed. To do this, we use the `VisionSetup` script. You can access it, if it exists in the scene, by calling `VisionSetup.Instance`.
-
-We have provided basic UI for dealing with setup flags that require user action. To use it, add the `BuiltInSetupUI` script to your scene.
-
-![vision_setup_fullscreen](Images/VisionSetup/fullscreen.png)
-![vision_setup_passive](Images/VisionSetup/passive.png)
-
-To customize the visuals, look at these prefabs (Modify if you are using fullscreen setup or not in the `SetupUI` child of `VisionSetup`)
-+ `BuiltInSetupFlagConstant` - Points to images used by the prefabs below
-+ `BuiltInSetupUIDropdown` - Prefab used for the non-blocking setup dropdown
-+ `BuiltInSetupUIFullScreen` - Prefab used for the blocking full screen setup
-
 ### SetState
 ```csharp
 public void SetState(VisionSetupState state);
