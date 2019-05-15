@@ -50,6 +50,7 @@ We use domino codes internally for prototyping when we want to detect some hardw
 + Read the [Quick-Start Guide](./README-QuickStart.md)
 + Learn about [Testing In-Editor](./README-TestingInEditor.md)
 + Go over our [Example Projects](./README-Examples.md)
++ Read about our [Vision Support](./README-VisionSupport.md)
 + Review the full [API Docs](./README-API.md)
 + If you're having troubles checkout the [Debugging](./README-TestingInEditor.md#Debugging) section
 + Make your game! Give us some [feedback](#Future-Plans)
