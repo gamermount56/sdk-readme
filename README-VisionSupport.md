@@ -6,7 +6,7 @@ The SDK supports several Osmo standard decks of physical pieces:
   - Coding - the various tiles shipped with Coding Awbie and Coding Jam (currently the character pieces with Coding Duo are not supported)
   - DominoCodes - printable barcodes, convenient to prototype new games [(printable link)](./dominocodes.pdf).
 
-NOTE: We only support using a single deck at a time (so the SDK will not be able to detect both Words and Numbers tiles at the same time).
+NOTE: We only support using a single deck at a time (so the SDK will not be able to detect both Words and Numbers tiles at the same time). You are able to change decks at runtime by calling `TangibleManager.Register`
 
 ## Customizing Decks
 

@@ -30,6 +30,7 @@ You can set it in the inspector in your `TangibleManager`. Values set in the ins
 - [TangibleManager.OnObjectExit](#onobjectexit)
 - [TangibleManager.OnUpdatedTangibleObjects](#onupdatedtangibleobjects)
 - [TangibleManager.Mute](#mute)
+- [TangibleManager.SetDeck](#setdeck)
 
 `TangibleManager` is the main interface to the OsmoSDK. You can access all the `TangibleObject`s here which represent the physical pieces.
 
@@ -79,6 +80,14 @@ public void Mute(bool mute);
 ```
 
 Muting the `VisionFramework` will disable all computer vision processing until you unmute. This is useful if you want to save CPU resources when you don't need any data from the `VisionFramework` (such as if you're on a home screen or a settings screen).
+
+
+### Register
+```csharp
+public void Register(Deck deck);
+```
+
+Change the currently active runtime deck that will be used for detecting objects.
 
 
 ## TangibleObject

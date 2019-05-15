@@ -44,6 +44,8 @@ Currently, the SDK supported the following tilesets: Words, Numbers, Coding, Dom
 
 We use domino codes internally for prototyping when we want to detect some hardware that we haven't developed the computer vision for yet. Just print out the codes and stick them on top of whatever the new hardware pieces are. Play around with different scales of printing the codes depending on how near/far/high your pieces are going to be.
 
+Detection for some of our other games (Tangram, Detective, Monster, etc) are not supported in the SDK at this time.
+
 ## I have the SDK now, what do I do?
 
 + Make sure you understand the [License Agreement](#Legal)
